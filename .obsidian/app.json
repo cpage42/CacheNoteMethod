@@ -1,0 +1,11 @@
+{
+  "livePreview": true,
+  "showLineNumber": false,
+  "attachmentFolderPath": "attachments",
+  "newFileLocation": "current",
+  "userIgnoreFilters": [
+    "__pycache__/",
+    "Archive/"
+  ],
+  "alwaysUpdateLinks": true
+}
