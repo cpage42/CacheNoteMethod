@@ -44,6 +44,7 @@ Also just type the name: `rho` → ρ, `tau` → τ, `pi` → π, `mu` → μ, `
 | `->` | → |
 | `=>` | ⟹ (implies) |
 | `lrh` | ⇌ (equilibrium, `\rightleftharpoons`) |
+| `@E` | ℰ (emf, `\mathcal{E}`) |
 | `!=` | ≠ |
 | `<=` / `>=` | ≤ / ≥ |
 | `approx` | ≈ |

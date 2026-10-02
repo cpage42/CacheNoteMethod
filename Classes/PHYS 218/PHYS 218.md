@@ -23,8 +23,7 @@ canvas: https://courses.fortlewis.edu/courses/36393
 **Homework:** Expert TA (via Canvas) · due 10 PM · 4 free submissions per part · late work = 50% credit
 **Resources:** Syllabus & course schedule (Canvas → Syllabus; schedule updated Sep 27) · Lecture slides by chapter (Canvas → Pages → Lectures by chapter)
 
-> [!todo] Upcoming (snapshot from Canvas, Sep 30)
-> - Wed 9/30 10 PM: HW 10.2
+> [!todo] Upcoming (Canvas snapshot, updated Oct 1)
 > - Fri 10/2 10 PM: HW 10.3
 > - Mon 10/5 10 PM: HW 10.4
 > - Wed 10/7 10 PM: HW 10.5

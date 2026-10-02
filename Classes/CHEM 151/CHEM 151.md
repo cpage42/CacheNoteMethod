@@ -20,9 +20,8 @@ canvas: https://courses.fortlewis.edu/courses/35753
 **Rules:** No exam retakes; a missed exam is replaced by your final exam grade. Phones collected on exam/quiz days. 3+ zeros in lab = fail the course.
 **Calculator:** Only the **TI-30XIIS** is allowed on quizzes/exams.
 
-> [!todo] Upcoming (snapshot from Canvas, Sep 30)
-> - **Thu 10/1 9:35 AM: Module 2 Quiz 1**
-> - This week: Kc, ICE tables, small-x, Q vs K, Le Chatelier, ΔG and K
+> [!todo] Upcoming (Canvas snapshot, updated Oct 1)
+> - Covered this week: Kc, ICE tables, small-x, Q vs K, Le Chatelier, ΔG and K
 > - Next week (10/7, 10/9): acids & bases, pH, pKa/pKb
 
 ## Notes

@@ -19,7 +19,7 @@ canvas: https://courses.fortlewis.edu/courses/36803
 **Grading (~1100 pts):** Discussion/low-stakes ~250 · Essay 1 Group PSA 250 · Essay 2 Genre Analysis 250 · Essay 3 Researched Genre Production 300 · Final Presentation 50. You must complete all major essays to pass.
 **Style:** MLA or APA; pick one and stick with it ([Purdue OWL](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html)).
 
-> [!todo] Upcoming (snapshot from Canvas, Sep 30)
+> [!todo] Upcoming (Canvas snapshot, updated Oct 1)
 > - **Thu 10/1 11:59 PM: PSA Step 4 Final Campaign (group) + Step 5 Reflection Memo (individual)**
 > - Fri 10/2 11:59 PM: PSA Showcase evaluation · Q&R 3 (Genre definition)
 > - Tue 10/6 11:59 PM: In-class group discussion board

@@ -1,4 +1,4 @@
-#flashcards
+Archived copy (tag removed so Spaced Repetition ignores it)
 Back to [[Home]] · Classes: [[PHYS 218]] · [[MATH 327]]
 
 ## PHYS 218
@@ -24,6 +24,8 @@ How to find eigenvalues::solve $\det(A - \lambda I) = 0$
 General solution of $\vec{x}\,' = A\vec{x}$ (real, distinct $\lambda$)::$\vec{x} = c_{1}e^{\lambda_{1}t}\vec{v}_{1} + c_{2}e^{\lambda_{2}t}\vec{v}_{2}$
 Both eigenvalues negative::sink (stable node)
 Both eigenvalues positive::source (unstable node)
+<!--SR:!2026-10-02,1,230-->
 Eigenvalues of opposite sign::saddle
 Complex eigenvalues $\alpha \pm \beta i$::spiral (in if $\alpha<0$, out if $\alpha>0$, center if $\alpha=0$)
 Trace & determinant shortcut::$\lambda_{1}+\lambda_{2} = \text{tr}A$, $\lambda_{1}\lambda_{2} = \det A$
+<!--SR:!2026-10-05,4,270-->

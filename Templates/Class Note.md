@@ -1,10 +1,10 @@
 ---
-class: "[[CLASS]]"
+class: ""
 date: {{date}}
 tags: []
 ---
 # {{title}}
-Class: [[CLASS]]
+Class: (link your class hub here)
 
 > [!abstract] Objective
 > 

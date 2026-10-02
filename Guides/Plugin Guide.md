@@ -47,7 +47,7 @@ Great for: formulas, definitions, units, chem reactions.
 - Any note tagged `#flashcards` becomes a deck. Write cards as `Question::Answer`.
 - Click the **flashcard icon** in the left sidebar (or Ctrl+P → `Review flashcards`) to study.
 - It schedules each card based on how well you knew it.
-- A starter deck is in [[Flashcards - Formulas]].
+- Starter decks: [[Flashcards - PHYS 218]] (tag `#flashcards/physics`) and [[Flashcards - MATH 327]] (tag `#flashcards/math`). Tags like `#flashcards/<name>` make subdecks, so you can practice one class at a time.
 
 ---
 
@@ -63,5 +63,5 @@ LIST FROM [[PHYS 218]]
 
 ## 6. Templates (built in): new class note in one click
 - Make a new note → **Ctrl+P** → `Templates: Insert template` → **Class Note**.
-- Then replace `CLASS` with the class name, e.g. `MATH 327`.
+- Then link your class hub on the `Class:` line, e.g. `[[MATH 327]]`, so the note shows up on that class's hub page.
 - The template lives in the `Templates` folder, and you can edit it however you want.

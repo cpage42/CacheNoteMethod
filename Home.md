@@ -40,7 +40,8 @@ Fall 2026 · Fort Lewis College
 | **Wed 12/9, 9:45–11:45 AM** | **PHYS 218 final** |
 
 ## Study
-- [[Flashcards - Formulas]]: Spaced Repetition deck (click the cards icon in the left sidebar)
+- Flashcards: [[Flashcards - PHYS 218]] · [[Flashcards - MATH 327]]. Click the cards icon in the left sidebar and pick the `physics` or `math` deck.
+- [[Quiz Prep - HW 9.2 and 10.1]]: PHYS 218 practice quiz with an answer key
 - [[Eigen Calculator]]: eigenvalues, general solutions and a DE solution checker (MATH 327)
 
 ## Guides
@@ -49,9 +50,8 @@ Fall 2026 · Fort Lewis College
 - [[Plugin Guide]]: Desmos, TikZ circuits, flashcards, Dataview, templates
 
 ## Vault layout
-- **Class folders:** one per class, each with a hub note that auto-lists its notes
-- **Study:** flashcards
+- **Classes:** one folder per class. Each has a hub note that auto-lists everything for that class, plus subfolders such as `Notes`, `Lectures`, `Homework & Quizzes`, `Exams`, `Flashcards` and `Tools`
 - **Guides:** how-tos for this vault
 - **Templates:** Class Note template
 - **attachments:** images, sorted by class (new pasted images land here automatically)
-- **Archive:** old drafts (hidden from search)
+- **Archive:** old drafts and leftovers (hidden from search)
