@@ -7,7 +7,7 @@ My Obsidian vault for class notes at Fort Lewis College (physics, math, chemistr
 - **Classes/**: one folder per class, with lectures, flashcards and homework notes.
 - **Classes/MATH 327/Tools/**: the math tools.
   - `eigen.jl`: eigenvalues and eigenvectors of a 2×2 matrix, exact (fractions and square roots) when the entries are rational.
-  - `dech.jl`: checks whether a proposed solution solves a differential equation. Both are typed in as LaTeX.
+  - `dech.jl`: checks whether a proposed solution solves a differential equation. You type both the equation and the solution in as LaTeX.
   - `Eigen Calculator & DEch.md`: the note that runs both tools with Run buttons.
 - **`eigen()` shortcut**: type `eigen(1,2,3,4)=` in any note (matrix entries row by row). As soon as you type the equals sign, it's replaced with the eigenvalues and eigenvectors as a LaTeX block. This is the small `eigen-inline` plugin in `.obsidian/plugins/eigen-inline`.
 - **Guides/**: how the vault is set up, the plugins, and keyboard shortcuts. Start with `START HERE - Shortcuts`.
