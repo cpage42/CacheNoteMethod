@@ -1,5 +1,5 @@
 # RC Circuits
-Class: [[PHYS 218]]
+Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 9 and 10]]
 
 > [!abstract] Big picture
 > A resistor and a capacitor in series. The capacitor can't charge or discharge instantly. Charge flows through the resistor, which limits the current, so everything changes **exponentially** with time constant $\tau = RC$.

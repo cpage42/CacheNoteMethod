@@ -1,5 +1,5 @@
 # Quiz Prep: HW 9.2 and 10.1
-Class: [[PHYS 218]] · Covers current, resistivity, power (HW 9.2) and batteries, series/parallel (HW 10.1)
+Class: [[PHYS 218]] · Covers current, resistivity, power (HW 9.2) and batteries, series/parallel (HW 10.1) · Full chapter review: [[Exam 2 Review - Ch 9 and 10]]
 
 > [!abstract] The whole quiz in one sentence
 > A battery pushes charge around a loop. **Current** is how much flows, **resistance** is how hard the path fights it, and **power** is how fast energy gets burned. Every problem is one of those three ideas.

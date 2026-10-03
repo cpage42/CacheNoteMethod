@@ -28,7 +28,17 @@ canvas: https://courses.fortlewis.edu/courses/36393
 > - Mon 10/5 10 PM: HW 10.4
 > - Wed 10/7 10 PM: HW 10.5
 
-## Notes
+## Study
+| | |
+|---|---|
+| **Exam review** | [[Exam 2 Review - Ch 9 and 10]] (circuits exam: Ch 9–10, derivations + practice exam) |
+| **Exam corrections** | [[Exam 1 - Corrections]] (Ch 5–8) |
+| **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] |
+| **Notes** | [[RC circuits]] |
+| **Flashcards** | [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] |
+| **Textbook** | [UPV2 PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Textbook/UPV2.pdf>): Ch 5 charges & fields · 6 Gauss · 7 potential · 8 capacitance · 9 current & resistance · 10 DC circuits · 11–13 magnetism next |
+
+## All notes
 ```dataview
 LIST FROM [[]] WHERE file.name != "Home" SORT file.ctime ASC
 ```

@@ -5,7 +5,7 @@ score: 62/100
 tags: [exam, corrections]
 ---
 # PHYS 218 – Fall 2026 – Exam 1 – Electrostatics
-Class: [[PHYS 218]] · Original: [graded exam PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Exams/Exam 1 - graded (Merged_Exam_Pages).pdf>)
+Class: [[PHYS 218]] · Original: [graded exam PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Exams/Exam 1 - graded (Merged_Exam_Pages).pdf>) · Drill it: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]]
 
 **Name:** Cache Page  **Score: 62 / 100**
 
