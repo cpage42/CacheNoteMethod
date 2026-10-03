@@ -42,7 +42,7 @@ Fall 2026 · Fort Lewis College
 ## Study
 - Flashcards: [[Flashcards - PHYS 218]] · [[Flashcards - MATH 327]]. Click the cards icon in the left sidebar and pick the `physics` or `math` deck.
 - [[Quiz Prep - HW 9.2 and 10.1]]: PHYS 218 practice quiz with an answer key
-- [[Eigen Calculator]]: eigenvalues, general solutions and a DE solution checker (MATH 327)
+- [[Eigen Calculator & DEch]]: eigenvalues, general solutions and a DE solution checker (MATH 327)
 
 ## Guides
 - [[START HERE - Shortcuts]]: Latex Suite math shortcuts

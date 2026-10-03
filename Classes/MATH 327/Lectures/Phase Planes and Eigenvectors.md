@@ -6,7 +6,7 @@ source: https://pub.pretext.plus/o/c37e31ca-1114-4043-aa68-257a6695ed9c/website/
 tags: [systems, eigenvalues, phase-plane]
 ---
 # W6 Wednesday: Phase Planes and Eigenvectors
-Class: [[MATH 327]] · Previous: [[Intro to Systems of DEs]] · Tool: [[Eigen Calculator]]
+Class: [[MATH 327]] · Previous: [[Intro to Systems of DEs]] · Tool: [[Eigen Calculator & DEch]]
 
 > [!abstract] Objective
 > Use eigenvalues and eigenvectors to **sketch phase planes**: draw the eigenvector spans, put arrows on them, and read off where every solution is headed.
@@ -160,4 +160,4 @@ Shortcut: $\lambda_{1}\lambda_{2} = \det A$ and $\lambda_{1}+\lambda_{2} = \oper
 > 4. **Classify:** sink, source, saddle, or line of equilibria (see the table).
 > 5. **Near the origin**, curves follow the **slower** eigenvector (smaller $|\lambda|$). **Far away**, they run parallel to the **faster** one.
 > 6. **With an initial condition**, solve for $A$ and $B$ at $t = 0$ (two equations, two unknowns).
-> 7. **Check your eigenvalues** with $\lambda_{1}+\lambda_{2} = \operatorname{tr}A$ and $\lambda_{1}\lambda_{2} = \det A$, or run the [[Eigen Calculator]].
+> 7. **Check your eigenvalues** with $\lambda_{1}+\lambda_{2} = \operatorname{tr}A$ and $\lambda_{1}\lambda_{2} = \det A$, or run the [[Eigen Calculator & DEch]].

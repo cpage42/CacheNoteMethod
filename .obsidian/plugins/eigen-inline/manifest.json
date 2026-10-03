@@ -1,0 +1,9 @@
+{
+  "id": "eigen-inline",
+  "name": "Eigen Inline",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Type eigen(a,b,c,d)= in a note and it becomes the eigenvalues and eigenvectors, computed by eigen.jl.",
+  "author": "cpage42",
+  "isDesktopOnly": true
+}

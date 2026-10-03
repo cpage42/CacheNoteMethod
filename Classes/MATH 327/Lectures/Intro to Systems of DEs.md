@@ -127,7 +127,7 @@ y=0.5x|x>0|#8a8985|dashed
 > [!tip] Reading a phase plane
 > Every point is a (rabbits, coyotes) state, and the curves show where the system goes from there. Starting exactly on an eigenvector line keeps you on it. Starting anywhere else puts you on a curve that ends up following the line with the **bigger** eigenvalue ($\lambda = 0.3$, the $[2,1]$ direction).
 
-**How do we find eigenvalues and eigenvectors?** Take a linear algebra course, or use the Python script: it's built into [[Eigen Calculator]] and runs right inside Obsidian. By hand: solve $\det(A - \lambda I) = 0$ for $\lambda$, then $(A - \lambda I)\vec{v} = \vec{0}$ for $\vec{v}$.
+**How do we find eigenvalues and eigenvectors?** Take a linear algebra course, or use the Julia script: it's built into [[Eigen Calculator & DEch]] and runs right inside Obsidian. By hand: solve $\det(A - \lambda I) = 0$ for $\lambda$, then $(A - \lambda I)\vec{v} = \vec{0}$ for $\vec{v}$.
 
 ---
 
@@ -191,3 +191,4 @@ $$
 > 3. **General solution** = a combination of the straight-line solutions: $\vec{x} = c_{1}e^{\lambda_{1}t}\vec{v}_{1} + c_{2}e^{\lambda_{2}t}\vec{v}_{2}$.
 > 4. Use the **initial condition** to solve for $c_{1}, c_{2}$ (two equations, two unknowns).
 > 5. **Check an eigenvector** by multiplying: $A\vec{v}$ should be a multiple of $\vec{v}$.
+
