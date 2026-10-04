@@ -12,6 +12,7 @@ const DEFAULT_SETTINGS = {
   juliaPath: "",                                   // blank = find it automatically
   scriptPath: "Classes/MATH 327/Tools/eigen.jl",  // relative to the vault
   showDecimals: true,
+  phasePlane: true,                                // draw a phase portrait under each result
 };
 
 // eigen( a , b , c , d ) with one level of nested parens allowed, e.g. sqrt(2)
@@ -85,6 +86,246 @@ function formatResult(args, stdout, showDec) {
   return "$$\n\\begin{aligned}\n" + rows.join("\\\\\n") + "\n\\end{aligned}\n$$";
 }
 
+// ---------- phase portraits for x' = A x ----------
+// phaseSVG(A, opts) returns an SVG string: vector field, eigenvector lines with
+// arrows showing growth/decay, and trajectories with arrows showing the direction of time.
+
+function evalNum(s) {
+  const t = String(s).trim();
+  if (!/^[0-9eE+\-*/().\s^a-z]*$/.test(t)) throw new Error(`can't read the value '${s}'`);
+  const js = t.replace(/\^/g, "**").replace(/\bsqrt\b/g, "Math.sqrt").replace(/\bpi\b/g, "Math.PI");
+  if (/[a-z]/i.test(js.replace(/Math\.(sqrt|PI)/g, "").replace(/\d[eE][+-]?\d/g, ""))) throw new Error(`can't read the value '${s}'`);
+  const v = Function(`"use strict"; return (${js});`)();
+  if (typeof v !== "number" || !isFinite(v)) throw new Error(`can't read the value '${s}'`);
+  return v;
+}
+
+function classify(a, b, c, d) {
+  const tr = a + d, det = a * d - b * c, disc = tr * tr - 4 * det;
+  const eps = 1e-12 * Math.max(1, Math.abs(a), Math.abs(b), Math.abs(c), Math.abs(d)) ** 2;
+  const stab = tr < 0 ? "stable" : "unstable";
+  let name;
+  if (Math.abs(det) <= eps) name = "Degenerate: a whole line of equilibrium points (det = 0)";
+  else if (det < 0) name = "Saddle point (unstable)";
+  else if (Math.abs(disc) <= eps) name = (Math.abs(tr) <= eps ? "Center" : `Degenerate (improper) node, ${stab}`);
+  else if (disc > 0) name = tr < 0 ? "Node, stable (sink)" : "Node, unstable (source)";
+  else if (Math.abs(tr) <= eps) name = "Center (neutrally stable)";
+  else name = tr < 0 ? "Spiral, stable (spiral sink)" : "Spiral, unstable (spiral source)";
+  if (disc < -eps) name += c > 0 ? ", turns counterclockwise" : ", turns clockwise";
+  return { tr, det, disc, name };
+}
+
+function realEigen(a, b, c, d) {
+  const tr = a + d, det = a * d - b * c, disc = tr * tr - 4 * det;
+  if (disc < 0) return [];
+  const s = Math.sqrt(disc);
+  const lams = disc === 0 ? [tr / 2] : [(tr - s) / 2, (tr + s) / 2];
+  const out = [];
+  for (const l of lams) {
+    let v;
+    if (Math.abs(b) > 1e-12) v = [b, l - a];
+    else if (Math.abs(c) > 1e-12) v = [l - d, c];
+    else v = Math.abs(l - a) < 1e-12 ? [1, 0] : [0, 1];
+    const n = Math.hypot(v[0], v[1]);
+    out.push({ lam: l, v: [v[0] / n, v[1] / n] });
+  }
+  // diagonal matrix with equal entries: every direction is an eigenvector; show the axes
+  if (Math.abs(b) < 1e-12 && Math.abs(c) < 1e-12 && Math.abs(a - d) < 1e-12) {
+    return [{ lam: a, v: [1, 0] }, { lam: a, v: [0, 1] }];
+  }
+  return out;
+}
+
+function fmtNum(x) {
+  const r = Math.round(x * 1000) / 1000;
+  return (Object.is(r, -0) ? 0 : r).toString().replace("-", "−");
+}
+
+function phaseSVG(A, opts = {}) {
+  const [a, b, c, d] = A;
+  const L = opts.range || 3;
+  const W = 360, P = 28;            // drawing size and padding
+  const S = W / (2 * L);            // pixels per unit
+  const X = x => P + (x + L) * S;
+  const Y = y => P + (L - y) * S;
+  const f = (x, y) => [a * x + b * y, c * x + d * y];
+  const inside = (x, y, m = 1.0) => Math.abs(x) <= L * m && Math.abs(y) <= L * m;
+  const parts = [];
+  const cls = classify(a, b, c, d);
+
+  // grid and axes
+  for (let k = -Math.floor(L); k <= Math.floor(L); k++) {
+    if (k === 0) continue;
+    parts.push(`<line class="pp-grid" x1="${X(k)}" y1="${Y(-L)}" x2="${X(k)}" y2="${Y(L)}"/>`);
+    parts.push(`<line class="pp-grid" x1="${X(-L)}" y1="${Y(k)}" x2="${X(L)}" y2="${Y(k)}"/>`);
+  }
+  parts.push(`<line class="pp-axis" x1="${X(-L)}" y1="${Y(0)}" x2="${X(L)}" y2="${Y(0)}"/>`);
+  parts.push(`<line class="pp-axis" x1="${X(0)}" y1="${Y(-L)}" x2="${X(0)}" y2="${Y(L)}"/>`);
+  parts.push(`<text class="pp-label" x="${X(L) - 4}" y="${Y(0) - 6}" text-anchor="end">x₁</text>`);
+  parts.push(`<text class="pp-label" x="${X(0) + 6}" y="${Y(L) + 12}">x₂</text>`);
+  parts.push(`<text class="pp-tick" x="${X(L)}" y="${Y(0) + 14}" text-anchor="end">${fmtNum(L)}</text>`);
+
+  // vector field: unit-length arrows, opacity by speed
+  const N = 15, cell = (2 * L) / N, len = cell * 0.42;
+  let vmax = 0;
+  const field = [];
+  for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+    const x = -L + (i + 0.5) * cell, y = -L + (j + 0.5) * cell;
+    const [u, v] = f(x, y), m = Math.hypot(u, v);
+    vmax = Math.max(vmax, m);
+    field.push([x, y, u, v, m]);
+  }
+  for (const [x, y, u, v, m] of field) {
+    if (m < 1e-12) { parts.push(`<circle class="pp-field-dot" cx="${X(x)}" cy="${Y(y)}" r="1.4"/>`); continue; }
+    const ux = u / m, uy = v / m;
+    const x0 = x - ux * len / 2, y0 = y - uy * len / 2, x1 = x + ux * len / 2, y1 = y + uy * len / 2;
+    const op = (0.35 + 0.65 * Math.sqrt(m / vmax)).toFixed(2);
+    parts.push(`<line class="pp-field" style="opacity:${op}" x1="${X(x0).toFixed(1)}" y1="${Y(y0).toFixed(1)}" x2="${X(x1).toFixed(1)}" y2="${Y(y1).toFixed(1)}" marker-end="url(#pp-ah-f)"/>`);
+  }
+
+  // trajectories (RK4 with a step that moves a fixed distance in the plane)
+  const ds = L / 120;
+  function trace(x, y, dir) {
+    const pts = [[x, y]];
+    for (let k = 0; k < 1500; k++) {
+      const [u, v] = f(x, y), m = Math.hypot(u, v);
+      if (m < 1e-9 || Math.hypot(x, y) < L * 0.01) break;
+      const h = dir * ds / m;
+      const k1 = f(x, y);
+      const k2 = f(x + h * k1[0] / 2, y + h * k1[1] / 2);
+      const k3 = f(x + h * k2[0] / 2, y + h * k2[1] / 2);
+      const k4 = f(x + h * k3[0], y + h * k3[1]);
+      x += h * (k1[0] + 2 * k2[0] + 2 * k3[0] + k4[0]) / 6;
+      y += h * (k1[1] + 2 * k2[1] + 2 * k3[1] + k4[1]) / 6;
+      pts.push([x, y]);
+      if (!inside(x, y, 1.02)) break;
+      // closed orbit (center): stop after one loop
+      if (k > 40 && Math.hypot(x - pts[0][0], y - pts[0][1]) < ds * 1.5) break;
+    }
+    return pts;
+  }
+  const seeds = [];
+  const nSeeds = 16;
+  for (let i = 0; i < nSeeds; i++) {
+    const t = (2 * Math.PI * (i + 0.5)) / nSeeds;
+    seeds.push([0.92 * L * Math.cos(t), 0.92 * L * Math.sin(t)]);
+  }
+  const isCenter = cls.disc < 0 && Math.abs(cls.tr) < 1e-9 * Math.max(1, Math.abs(cls.det));
+  if (isCenter) {
+    // closed orbits: one per radius along the x1-axis, otherwise they all overlap
+    seeds.length = 0;
+    for (const r of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) seeds.push([r * L, 0]);
+  }
+  const eig = realEigen(a, b, c, d);
+  const paths = [];
+  for (const [sx, sy] of seeds) {
+    const fwd = trace(sx, sy, +1), bwd = trace(sx, sy, -1).reverse();
+    const pts = bwd.concat(fwd.slice(1));
+    if (pts.length > 3) paths.push(pts);
+  }
+  function pathD(pts) {
+    return pts.map((p, i) => `${i ? "L" : "M"}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join("");
+  }
+  function arrowAt(pts, frac, klass) {
+    // arrowhead at a fraction of the arc length, pointing forward in time
+    let total = 0;
+    const seg = [];
+    for (let i = 1; i < pts.length; i++) {
+      const l = Math.hypot(X(pts[i][0]) - X(pts[i - 1][0]), Y(pts[i][1]) - Y(pts[i - 1][1]));
+      seg.push(l); total += l;
+    }
+    let target = total * frac, i = 0;
+    while (i < seg.length - 1 && target > seg[i]) { target -= seg[i]; i++; }
+    const p = pts[i], q = pts[Math.min(i + 1, pts.length - 1)];
+    const px = X(p[0]), py = Y(p[1]), qx = X(q[0]), qy = Y(q[1]);
+    const ang = Math.atan2(qy - py, qx - px) * 180 / Math.PI;
+    if (!isFinite(ang) || (px === qx && py === qy)) return "";
+    return `<path class="${klass}" d="M4,0 L-4,-3.5 L-4,3.5 Z" transform="translate(${px.toFixed(1)},${py.toFixed(1)}) rotate(${ang.toFixed(1)})"/>`;
+  }
+  for (const pts of paths) {
+    parts.push(`<path class="pp-traj" d="${pathD(pts)}"/>`);
+    parts.push(arrowAt(pts, 0.35, "pp-traj-head"));
+    parts.push(arrowAt(pts, 0.7, "pp-traj-head"));
+  }
+
+  // eigenvector lines, with arrows: outward if lambda > 0, inward if lambda < 0
+  const colors = ["pp-e1", "pp-e2"];
+  eig.forEach((e, idx) => {
+    const [vx, vy] = e.v, klass = colors[idx % 2];
+    // extend the line to the edge of the box
+    const tmax = Math.min(vx !== 0 ? L / Math.abs(vx) : Infinity, vy !== 0 ? L / Math.abs(vy) : Infinity);
+    parts.push(`<line class="${klass}" x1="${X(-vx * tmax)}" y1="${Y(-vy * tmax)}" x2="${X(vx * tmax)}" y2="${Y(vy * tmax)}"/>`);
+    for (const sgn of [1, -1]) for (const r of [0.35, 0.75]) {
+      const px = sgn * vx * tmax * r, py = sgn * vy * tmax * r;
+      if (Math.abs(e.lam) < 1e-12) continue; // zero eigenvalue: line of equilibria, no motion
+      const out = e.lam > 0 ? 1 : -1;
+      const ang = Math.atan2(-(sgn * vy * out), sgn * vx * out) * 180 / Math.PI;
+      parts.push(`<path class="${klass}-head" d="M5,0 L-5,-4.5 L-5,4.5 Z" transform="translate(${X(px).toFixed(1)},${Y(py).toFixed(1)}) rotate(${ang.toFixed(1)})"/>`);
+    }
+  });
+
+  parts.push(`<circle class="pp-origin" cx="${X(0)}" cy="${Y(0)}" r="3"/>`);
+
+  const H = W + 2 * P;
+  const style = `
+  .pp-bg{fill:var(--background-primary,#fff)}
+  .pp-grid{stroke:var(--background-modifier-border,#ddd);stroke-width:0.6}
+  .pp-axis{stroke:var(--text-muted,#666);stroke-width:1}
+  .pp-label,.pp-tick{fill:var(--text-muted,#666);font:12px var(--font-interface,sans-serif)}
+  .pp-tick{font-size:10px}
+  .pp-field{stroke:var(--text-faint,#999);stroke-width:1}
+  .pp-field-dot,#pp-ah-f path{fill:var(--text-faint,#999)}
+  .pp-traj{fill:none;stroke:var(--interactive-accent,#7c5cff);stroke-width:1.5;opacity:.85}
+  .pp-traj-head{fill:var(--interactive-accent,#7c5cff)}
+  .pp-e1{stroke:#e8590c;stroke-width:2.4}
+  .pp-e2{stroke:#1c9e6b;stroke-width:2.4}
+  .pp-e1-head,.pp-e1-text{fill:#e8590c}
+  .pp-e2-head,.pp-e2-text{fill:#1c9e6b}
+  .pp-e1-text,.pp-e2-text{font:bold 12px var(--font-interface,sans-serif);paint-order:stroke;stroke:var(--background-primary,#fff);stroke-width:3px}
+  .pp-origin{fill:var(--text-normal,#222)}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W + 2 * P} ${H}" width="100%" style="max-width:${W + 2 * P}px" class="pp-svg">
+<style>${style}</style>
+<defs><marker id="pp-ah-f" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z"/></marker></defs>
+<rect class="pp-bg" x="0" y="0" width="${W + 2 * P}" height="${H}" rx="6"/>
+<clipPath id="pp-clip"><rect x="${P}" y="${P}" width="${W}" height="${W}"/></clipPath>
+<g clip-path="url(#pp-clip)">${parts.join("\n")}</g>
+</svg>`;
+}
+
+function phaseCaption(A) {
+  const cls = classify(...A);
+  const eig = realEigen(...A);
+  const sw = (col, txt) => `<span style="white-space:nowrap"><span style="display:inline-block;width:14px;height:3px;background:${col};vertical-align:middle;margin-right:4px;border-radius:2px"></span>${txt}</span>`;
+  const items = [];
+  const cols = ["#e8590c", "#1c9e6b"];
+  eig.forEach((e, i) => {
+    const what = Math.abs(e.lam) < 1e-12 ? "every point on this line is an equilibrium"
+      : e.lam > 0 ? "moves out along this line" : "moves in along this line";
+    items.push(sw(cols[i % 2], `λ${eig.length > 1 ? (i ? "₂" : "₁") : ""} = ${fmtNum(e.lam)}: ${what}`));
+  });
+  items.push(sw("var(--interactive-accent,#7c5cff)", "trajectories, arrows point forward in time"));
+  return `<div style="font-weight:600;margin-bottom:2px">${cls.name}</div><div style="display:flex;flex-wrap:wrap;gap:4px 14px;font-size:0.85em;color:var(--text-muted)">${items.join("")}</div>`;
+}
+
+// parse a phase-plane block: "A = a b c d" (or "a b c d"), optional "range = 5"
+function parsePhaseBlock(src) {
+  let A = null, range = null;
+  for (const raw of src.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line) continue;
+    const r = line.match(/^range\s*=\s*(.+)$/i);
+    if (r) { range = evalNum(r[1]); continue; }
+    const m = line.replace(/^A\s*=\s*/i, "").replace(/[\[\],;]/g, " ").trim().split(/\s+/);
+    if (m.length === 4) A = m.map(evalNum);
+  }
+  if (!A) throw new Error("write the matrix as  A = a b c d  (row by row)");
+  if (!range || range <= 0) {
+    // default window: 3, a little bigger if that's too small to see anything interesting
+    range = 3;
+  }
+  return { A, range };
+}
+
 // ---------- finding julia ----------
 
 function candidateJulias() {
@@ -147,6 +388,22 @@ class EigenInline extends obsidian.Plugin {
       },
     });
 
+    // ```phase-plane``` code blocks: A = a b c d (row by row), optional range = 5
+    this.registerMarkdownCodeBlockProcessor("phase-plane", (src, el) => {
+      try {
+        const { A, range } = parsePhaseBlock(src);
+        const box = el.createDiv({ cls: "eigen-phase-plane" });
+        box.style.margin = "0.5em 0";
+        const pic = box.createDiv();
+        pic.innerHTML = phaseSVG(A, { range });
+        const cap = box.createDiv();
+        cap.style.marginTop = "4px";
+        cap.innerHTML = phaseCaption(A);
+      } catch (e) {
+        el.createEl("pre", { text: "phase-plane: " + e.message });
+      }
+    });
+
     this.addSettingTab(new EigenSettings(this.app, this));
   }
 
@@ -173,6 +430,9 @@ class EigenInline extends obsidian.Plugin {
     try {
       const out = await this.compute(args);
       replacement = formatResult(args, out, this.settings.showDecimals);
+      if (this.settings.phasePlane) {
+        replacement += "\n```phase-plane\nA = " + args.join(" ") + "\n```";
+      }
       // a $$ block needs its own lines
       const lineText = editor.getLine(line) || "";
       const idx = lineText.indexOf(tag);
@@ -240,6 +500,12 @@ class EigenSettings extends obsidian.PluginSettingTab {
         this.plugin.settings.scriptPath = v.trim(); await this.plugin.saveData(this.plugin.settings);
       }));
     new obsidian.Setting(containerEl)
+      .setName("Draw phase portrait")
+      .setDesc("Add a phase-plane graph (vector field, eigenvector lines, trajectories) under each result.")
+      .addToggle(t => t.setValue(this.plugin.settings.phasePlane).onChange(async v => {
+        this.plugin.settings.phasePlane = v; await this.plugin.saveData(this.plugin.settings);
+      }));
+    new obsidian.Setting(containerEl)
       .setName("Show decimals")
       .setDesc("Add ≈ decimal values next to square-root answers.")
       .addToggle(t => t.setValue(this.plugin.settings.showDecimals).onChange(async v => {
@@ -249,4 +515,4 @@ class EigenSettings extends obsidian.PluginSettingTab {
 }
 
 module.exports = EigenInline;
-module.exports._test = { splitArgs, formatResult, TRIGGER_RE };
+module.exports._test = { splitArgs, formatResult, TRIGGER_RE, phaseSVG, phaseCaption, parsePhaseBlock };

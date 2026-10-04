@@ -75,3 +75,18 @@ Type `eigen(a,b,c,d)=` anywhere in any note, with the matrix entries **row by ro
 - Forgot the equals sign? Put the cursor on the line, press **Ctrl+P** and run **Eigen Inline: Evaluate eigen(...) on this line**.
 - **Ctrl+Z** undoes it. Settings → Eigen Inline lets you turn off the ≈ decimals.
 - This is the `eigen-inline` plugin in `.obsidian/plugins`; it runs `eigen.jl` from this folder.
+
+### Phase portraits
+Every `eigen()` result now comes with a phase portrait of $\vec x\,' = A\vec x$ right under it:
+- **Gray arrows:** the vector field (darker means faster).
+- **Orange and green lines:** the eigenvectors. Their arrows point **out** when that eigenvalue is positive and **in** when it's negative.
+- **Purple curves:** trajectories, with arrowheads pointing forward in time.
+- **Caption:** the type (saddle, node, spiral, center), whether it's stable, and which way spirals turn.
+
+You can also draw one by itself. Make a code block named `phase-plane`, put `A = a b c d` inside, and optionally a line `range = 5` to zoom out:
+
+```phase-plane
+A = -1 -2 2 -1
+```
+
+Don't want the graph? Turn off **Draw phase portrait** in Settings → Eigen Inline.

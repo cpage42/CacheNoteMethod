@@ -1,5 +1,5 @@
 # Exam 2 Review: Ch 9 and 10 (Current, Resistance, DC Circuits)
-Class: [[PHYS 218]] · Covers all of *University Physics Vol. 2* Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Quiz Prep - HW 9.2 and 10.1]] · [[RC circuits]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+Class: [[PHYS 218]] · Covers all of *University Physics Vol. 2* Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Quiz Prep - HW 9.2 and 10.1]] · [[RC circuits]] · [[Physics Intuition - Ch 5-10]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
 > [!abstract] Both chapters in one paragraph
 > An electric field inside a wire pushes free charges along slowly (the **drift velocity**), and the rate charge passes a point is the **current**. How hard a material fights that flow is its **resistivity**, and a shaped piece of it has a **resistance** $R = \rho L/A$. For ohmic materials $V = IR$. Pushing current through resistance burns energy at $P = IV$. A **battery** is an emf $\varepsilon$ with a small internal resistance $r$. Wire batteries and resistors into a network and two conservation laws solve everything: charge is conserved at junctions (**KCL**) and energy is conserved around loops (**KVL**). Add a capacitor and the circuit gets a clock, $\tau = RC$.
