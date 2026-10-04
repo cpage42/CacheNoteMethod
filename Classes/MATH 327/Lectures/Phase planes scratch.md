@@ -131,3 +131,13 @@ $$
 A = 1.2 4 3 0.8
 ```
 
+$$
+\begin{aligned}
+A &= \begin{bmatrix}62 & 8\\3 & 8.5\end{bmatrix}\\
+\lambda_1 &= \frac{141}{4} - \frac{1}{4}\sqrt{11833} \approx 8.0551, & v_1 &= \begin{bmatrix}32\\-107 - \sqrt{11833}\end{bmatrix} \approx \begin{bmatrix}32\\-215.78\end{bmatrix}\\
+\lambda_2 &= \frac{141}{4} + \frac{1}{4}\sqrt{11833} \approx 62.445, & v_2 &= \begin{bmatrix}32\\-107 + \sqrt{11833}\end{bmatrix} \approx \begin{bmatrix}32\\1.7796\end{bmatrix}
+\end{aligned}
+$$
+```phase-plane
+A = 62 8 3 8.5
+```
