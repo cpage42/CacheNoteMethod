@@ -83,7 +83,19 @@ Every `eigen()` result now comes with a phase portrait of $\vec x\,' = A\vec x$ 
 - **Purple curves:** trajectories, with arrowheads pointing forward in time.
 - **Caption:** the type (saddle, node, spiral, center), whether it's stable, and which way spirals turn.
 
-You can also draw one by itself. Make a code block named `phase-plane`, put `A = a b c d` inside, and optionally a line `range = 5` to zoom out:
+### Starting points: `eigen(...)[...]`
+Add starting points in square brackets right after the matrix:
+
+`eigen(1,-4,-2,-1)[(2,-1),(-1,2)]=`
+
+When you type the `=`, you get the usual eigenvalues and eigenvectors, then:
+- **The general solution** $\vec x(t) = c_1 e^{\lambda_1 t}\vec v_1 + c_2 e^{\lambda_2 t}\vec v_2$, using the same $\lambda$'s and $\vec v$'s printed above it.
+- **One particular solution per starting point**, with $c_1$ and $c_2$ solved for (as fractions when they come out rational).
+- **The phase portrait**, with each starting point's trajectory drawn in its own color, a dot where it starts, and arrows showing where it goes.
+
+Points can be written `[(2,-1),(-1,2)]`, `[(2,-1) (-1,2)]` or `[2,-1; -1,2]`. The window zooms out on its own if a point is far from the origin. Particular solutions are written out for real, distinct eigenvalues. For complex or repeated eigenvalues you still get the picture, plus a note.
+
+You can also draw one by itself. Make a code block named `phase-plane`, put `A = a b c d` inside, and optionally a line `range = 5` to zoom out and a line `points = (2,-1) (-1,2)` for starting points:
 
 ```phase-plane
 A = -1 -2 2 -1

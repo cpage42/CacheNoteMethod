@@ -58,7 +58,7 @@ left=0; right=4; bottom=0; top=1.2; height=260
 y=x/(x^2+1)^{3/2}|x>0|#2a78d6|label:ring
 y=1/x^2|x>0.4|dashed|#8a8985|label:point charge
 ```
-<span style="color:#2a78d6">Blue: field on the axis of a ring</span> (radius 1, $kQ = 1$). Gray dashed: a point charge with the same $Q$. The ring's field is **zero at the center**, peaks near $z \approx 0.7R$, and then merges into the point-charge curve far away. Every ring, disk and line problem has this shape: an exact answer up close, and $kQ/r^2$ from far away.
+Blue: field on the axis of a ring (radius 1, $kQ = 1$). Gray dashed: a point charge with the same $Q$. The ring's field is **zero at the center**, peaks near $z \approx 0.7R$, and then merges into the point-charge curve far away. Every ring, disk and line problem has this shape: an exact answer up close, and $kQ/r^2$ from far away.
 
 ### Why a plane's field doesn't weaken with distance
 Step back from an infinite sheet. Each bit of charge is now farther away, so it pushes more weakly. But more of the sheet now pushes at you mostly straight on, instead of nearly sideways, which cancels. The two effects balance exactly. With field lines: the lines leave the sheet perpendicular and parallel to each other, they never spread out, so their density (the field) stays constant.
@@ -133,7 +133,7 @@ $V$ belongs to the place. $U = qV$ is what a particular charge has *at* that pla
 **Volts measure energy per charge.** An electron dropping through 1 V gains 1 eV. A 12 V battery gives every coulomb 12 J. Thinking "joules per coulomb" makes $P = IV$ obvious later: (C/s)(J/C) = J/s.
 
 ### Why potential is easier than field
-The field is a vector: to add fields you split them into components and worry about cancellation. The potential is a plain number with a sign. To add potentials you add numbers: $V = \sum kq_i/r_i$, no angles at all. **When a problem asks for $V$ from point charges, never integrate the field.** Just add $kq/r$ for each charge (that's the Exam 1 lesson). Then, if you need $E$, take the slope of $V$.
+The field is a vector: to add fields you split them into components and worry about cancellation. The potential is a plain number with a sign. To add potentials you add numbers: $V = \sum kq_i/r_i$, no angles at all. **When a problem asks for $V$ from point charges, never integrate the field.** Just add $kq/r$ for each charge (that's the Exam 1 lesson). Then, if you need[[]] $E$, take the slope of $V$.
 
 ### The disk, one more time
 For a disk on its axis, every ring of the disk sits at the same distance $\sqrt{z^2+r^2}$ from the point, so each ring contributes $k\,dq/\sqrt{z^2+r^2}$ with no cancellation to worry about. Add the rings and you get $V$. Then $E = -dV/dz$ is just a derivative. The hard vector integral turns into an easy scalar integral plus one derivative.
@@ -152,7 +152,7 @@ y=0|0<x<1|#2a78d6|label:E
 y=1/x^2|x>1|#2a78d6
 x=1|dashed|#8a8985
 ```
-<span style="color:#30a46c">Green: $V(r)$</span>, <span style="color:#2a78d6">blue: $E(r)$</span> for a charged conducting sphere of radius 1. Inside, $V$ is a flat plateau and $E = 0$. At the surface $V$ stays continuous (just a crease), while $E$ jumps from 0 to its maximum, because that's where the surface charge is. Outside both look like a point charge. Check: the blue curve is minus the slope of the green one everywhere.
+Green: $V(r)$, blue: $E(r)$ for a charged conducting sphere of radius 1. Inside, $V$ is a flat plateau and $E = 0$. At the surface $V$ stays continuous (just a crease), while $E$ jumps from 0 to its maximum, because that's where the surface charge is. Outside both look like a point charge. Check: the blue curve is minus the slope of the green one everywhere.
 
 > [!question]- Predict: the potential at a point is zero. Must the field there be zero too?
 > **No.** Zero height doesn't mean flat ground. Halfway between $+q$ and $-q$, $V = 0$ (the two $kq/r$ terms cancel), but the field is strong there, pointing from $+$ toward $-$. And the reverse: halfway between two $+q$ charges, $E = 0$ (the pushes cancel) but $V$ is not zero.
@@ -282,7 +282,7 @@ y=x|0<x<1|dashed|#2a78d6
 y=1|dashed|#8a8985
 x=1|dashed|#8a8985
 ```
-<span style="color:#30a46c">Green: charge vs. time</span> in units of $\tau$. <span style="color:#2a78d6">Blue dashed: the starting slope.</span> **If the capacitor kept charging at its starting rate, it would be completely full after exactly one $\tau$.** It slows down, so it's only 63% full then. After about $5\tau$ it's essentially done.
+Green: charge vs. time in units of $\tau$. Blue dashed: the starting slope. **If the capacitor kept charging at its starting rate, it would be completely full after exactly one $\tau$.** It slows down, so it's only 63% full then. After about $5\tau$ it's essentially done.
 
 When several resistors surround the capacitor, ask: "if the battery were a wire, what resistance would the capacitor see?" That $R_{eq}$ sets $\tau$, because it's the pipe the tank actually drains or fills through.
 

@@ -24,7 +24,11 @@ canvas: https://courses.fortlewis.edu/courses/35753
 > - Covered this week: Kc, ICE tables, small-x, Q vs K, Le Chatelier, ΔG and K
 > - Next week (10/7, 10/9): acids & bases, pH, pKa/pKb
 
-## Notes
+## Study
+- Notes: [[Equilibrium and Thermo]]
+- Worksheets: [[Q vs K Worksheet]]
+
+## All notes
 ```dataview
 LIST FROM [[]] WHERE file.name != "Home" SORT file.ctime ASC
 ```

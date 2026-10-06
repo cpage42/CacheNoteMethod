@@ -28,6 +28,16 @@ canvas: https://courses.fortlewis.edu/courses/36393
 > - Mon 10/5 10 PM: HW 10.4
 > - Wed 10/7 10 PM: HW 10.5
 
+## Chapter notes
+One page per textbook chapter: the main ideas section by section, boxed formulas, a formula sheet and common mistakes.
+
+| Unit | Chapters |
+|---|---|
+| **Electrostatics (Exam 1)** | [[Ch 05 - Electric Charges and Fields\|Ch 05: Electric Charges and Fields]] · [[Ch 06 - Gauss's Law\|Ch 06: Gauss's Law]] · [[Ch 07 - Electric Potential\|Ch 07: Electric Potential]] · [[Ch 08 - Capacitance\|Ch 08: Capacitance]] |
+| **Circuits (Exam 2)** | [[Ch 09 - Current and Resistance\|Ch 09: Current and Resistance]] · [[Ch 10 - Direct-Current Circuits\|Ch 10: Direct-Current Circuits]] |
+| **Magnetism (Exam 3)** | [[Ch 11 - Magnetic Forces and Fields\|Ch 11: Magnetic Forces and Fields]] · [[Ch 12 - Sources of Magnetic Fields\|Ch 12: Sources of Magnetic Fields]] · [[Ch 13 - Electromagnetic Induction\|Ch 13: Electromagnetic Induction]] · [[Ch 14 - Inductance\|Ch 14: Inductance]] |
+| **AC and waves** | [[Ch 15 - Alternating-Current Circuits\|Ch 15: Alternating-Current Circuits]] · [[Ch 16 - Electromagnetic Waves\|Ch 16: Electromagnetic Waves]] |
+
 ## Study
 | | |
 |---|---|
@@ -35,7 +45,7 @@ canvas: https://courses.fortlewis.edu/courses/36393
 | **Exam corrections** | [[Exam 1 - Corrections]] (Ch 5–8) |
 | **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] |
 | **Big picture** | [[Physics Intuition - Ch 5-10]] (the mental pictures behind Ch 5–10, with predict-then-check questions) |
-| **Notes** | [[RC circuits]] |
+| **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] |
 | **Flashcards** | [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] |
 | **Textbook** | [UPV2 PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Textbook/UPV2.pdf>): Ch 5 charges & fields · 6 Gauss · 7 potential · 8 capacitance · 9 current & resistance · 10 DC circuits · 11–13 magnetism next |
 

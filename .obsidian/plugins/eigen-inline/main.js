@@ -16,7 +16,7 @@ const DEFAULT_SETTINGS = {
 };
 
 // eigen( a , b , c , d ) with one level of nested parens allowed, e.g. sqrt(2)
-const CALL = String.raw`eigen\(((?:[^()]|\([^()]*\))*)\)`;
+const CALL = String.raw`eigen\(((?:[^()]|\([^()]*\))*)\)(?:\s*\[([^\]]*)\])?`;
 const TRIGGER_RE = new RegExp(CALL + String.raw`\s*=$`);   // typed "=" right after it
 const LINE_RE = new RegExp(CALL, "g");
 
@@ -242,8 +242,9 @@ function phaseSVG(A, opts = {}) {
     if (!isFinite(ang) || (px === qx && py === qy)) return "";
     return `<path class="${klass}" d="M4,0 L-4,-3.5 L-4,3.5 Z" transform="translate(${px.toFixed(1)},${py.toFixed(1)}) rotate(${ang.toFixed(1)})"/>`;
   }
+  const dim = (opts.points || []).length ? ' style="opacity:.4"' : "";
   for (const pts of paths) {
-    parts.push(`<path class="pp-traj" d="${pathD(pts)}"/>`);
+    parts.push(`<path class="pp-traj"${dim} d="${pathD(pts)}"/>`);
     parts.push(arrowAt(pts, 0.35, "pp-traj-head"));
     parts.push(arrowAt(pts, 0.7, "pp-traj-head"));
   }
@@ -266,6 +267,23 @@ function phaseSVG(A, opts = {}) {
 
   parts.push(`<circle class="pp-origin" cx="${X(0)}" cy="${Y(0)}" r="3"/>`);
 
+  // trajectories through the starting points the user asked for
+  (opts.points || []).forEach((pt, k) => {
+    const col = POINT_COLORS[k % POINT_COLORS.length];
+    const fwd = trace(pt.x, pt.y, +1), bwd = trace(pt.x, pt.y, -1).reverse();
+    const pts = bwd.concat(fwd.slice(1));
+    if (pts.length > 2) {
+      parts.push(`<path d="${pathD(pts)}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round"/>`);
+      if (fwd.length > 3) {
+        parts.push(arrowAt(fwd, 0.45, "pp-pt-head").replace('class="pp-pt-head"', `fill="${col}"`).replace("M4,0 L-4,-3.5 L-4,3.5 Z", "M6,0 L-6,-5 L-6,5 Z"));
+        parts.push(arrowAt(fwd, 0.85, "pp-pt-head").replace('class="pp-pt-head"', `fill="${col}"`).replace("M4,0 L-4,-3.5 L-4,3.5 Z", "M6,0 L-6,-5 L-6,5 Z"));
+      }
+    }
+    parts.push(`<circle cx="${X(pt.x).toFixed(1)}" cy="${Y(pt.y).toFixed(1)}" r="5.5" fill="${col}" stroke="var(--background-primary,#fff)" stroke-width="1.8"/>`);
+    const right = X(pt.x) < P + W - 70;
+    parts.push(`<text class="pp-pt-text" x="${(X(pt.x) + (right ? 9 : -9)).toFixed(1)}" y="${(Y(pt.y) - 8).toFixed(1)}" text-anchor="${right ? "start" : "end"}" fill="${col}">(${fmtNum(pt.x)}, ${fmtNum(pt.y)})</text>`);
+  });
+
   const H = W + 2 * P;
   const style = `
   .pp-bg{fill:var(--background-primary,#fff)}
@@ -282,7 +300,8 @@ function phaseSVG(A, opts = {}) {
   .pp-e1-head,.pp-e1-text{fill:#e8590c}
   .pp-e2-head,.pp-e2-text{fill:#1c9e6b}
   .pp-e1-text,.pp-e2-text{font:bold 12px var(--font-interface,sans-serif);paint-order:stroke;stroke:var(--background-primary,#fff);stroke-width:3px}
-  .pp-origin{fill:var(--text-normal,#222)}`;
+  .pp-origin{fill:var(--text-normal,#222)}
+  .pp-pt-text{font:bold 12px var(--font-interface,sans-serif);paint-order:stroke;stroke:var(--background-primary,#fff);stroke-width:3.5px}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W + 2 * P} ${H}" width="100%" style="max-width:${W + 2 * P}px" class="pp-svg">
 <style>${style}</style>
 <defs><marker id="pp-ah-f" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L6,3 L0,6 Z"/></marker></defs>
@@ -292,7 +311,7 @@ function phaseSVG(A, opts = {}) {
 </svg>`;
 }
 
-function phaseCaption(A) {
+function phaseCaption(A, points = []) {
   const cls = classify(...A);
   const eig = realEigen(...A);
   const sw = (col, txt) => `<span style="white-space:nowrap"><span style="display:inline-block;width:14px;height:3px;background:${col};vertical-align:middle;margin-right:4px;border-radius:2px"></span>${txt}</span>`;
@@ -304,15 +323,102 @@ function phaseCaption(A) {
     items.push(sw(cols[i % 2], `λ${eig.length > 1 ? (i ? "₂" : "₁") : ""} = ${fmtNum(e.lam)}: ${what}`));
   });
   items.push(sw("var(--interactive-accent,#7c5cff)", "trajectories, arrows point forward in time"));
+  points.forEach((p, k) => items.push(sw(POINT_COLORS[k % POINT_COLORS.length], `starts at (${fmtNum(p.x)}, ${fmtNum(p.y)})`)));
   return `<div style="font-weight:600;margin-bottom:2px">${cls.name}</div><div style="display:flex;flex-wrap:wrap;gap:4px 14px;font-size:0.85em;color:var(--text-muted)">${items.join("")}</div>`;
+}
+
+const POINT_COLORS = ["#2a6fdb", "#c2185b", "#8e44ad", "#00897b", "#d68910", "#5d6d7e"];
+
+// "(2,-1),(-1,2)" or "(2,-1) (-1,2)" or "2,-1; -1,2" -> [{x, y, raw}]
+function parsePoints(text) {
+  const out = [];
+  const paren = [...text.matchAll(/\(([^()]*(?:\([^()]*\)[^()]*)*)\)/g)];
+  let pairs;
+  if (paren.length) pairs = paren.map(m => m[1].split(/[,;\s]+/).filter(Boolean));
+  else {
+    const nums = text.split(/[,;\s]+/).filter(Boolean);
+    if (nums.length % 2) throw new Error("starting points come in pairs: [(x, y), (x, y)]");
+    pairs = [];
+    for (let i = 0; i < nums.length; i += 2) pairs.push([nums[i], nums[i + 1]]);
+  }
+  for (const pr of pairs) {
+    if (pr.length !== 2) throw new Error(`a starting point needs 2 numbers: (${pr.join(", ")})`);
+    out.push({ x: evalNum(pr[0]), y: evalNum(pr[1]), raw: pr });
+  }
+  if (!out.length) throw new Error("no starting points found inside [ ]");
+  return out;
+}
+
+// x as a fraction p/q when it is one (to rounding), else a short decimal; LaTeX
+function fracTex(x) {
+  if (Math.abs(x) < 1e-12) return "0";
+  let h1 = 1, h0 = 0, k1 = 0, k0 = 1, b = Math.abs(x);
+  for (let i = 0; i < 30; i++) {
+    const a = Math.floor(b);
+    [h1, h0] = [a * h1 + h0, h1];
+    [k1, k0] = [a * k1 + k0, k1];
+    if (k1 > 10000) break;
+    if (Math.abs(Math.abs(x) - h1 / k1) < 1e-9 * Math.max(1, Math.abs(x))) {
+      const s = x < 0 ? "-" : "";
+      return k1 === 1 ? s + h1 : `${s}\\frac{${h1}}{${k1}}`;
+    }
+    if (b - a < 1e-12) break;
+    b = 1 / (b - a);
+  }
+  return Number(x.toPrecision(4)).toString();
+}
+
+// particular solutions x(t) = c1 e^{l1 t} v1 + c2 e^{l2 t} v2 through each starting point
+function formatParticular(stdout, pts) {
+  const lines = stdout.split(/\r?\n/).map(l => l.trim());
+  const get = key => {
+    const l = lines.find(x => x.startsWith(key + " ="));
+    return l ? l.slice(key.length + 2).split(/\s+~\s+/)[0].trim() : null;
+  };
+  const l1 = get("lambda1"), l2 = get("lambda2"), v1 = get("v1"), v2 = get("v2");
+  const note = s => `$$\\text{${s}}$$`;
+  if (!l1 || !v1 || !v2) return note("(could not read the eigenvectors for the particular solutions)");
+  if (v2.startsWith("(")) return note("Repeated eigenvalue with one eigenvector: particular solutions need a generalized eigenvector, not written out here.");
+  if (/(^|[\s*])i$/.test(l1)) {
+    return note("Complex eigenvalues: particular solutions need the real (cos/sin) form, not written out here.");
+  }
+  const vec = s => s.replace(/^\[|\]$/g, "").split(",").map(x => evalNum(x.trim()));
+  const [a1, b1] = vec(v1), [a2, b2] = vec(v2);
+  const det = a1 * b2 - a2 * b1;
+  if (Math.abs(det) < 1e-12) return note("(eigenvectors are parallel; can't split the starting point)");
+  const lamExp = s => {
+    const tx = texNum(s);
+    return /^-?\d+$/.test(s.trim()) ? (s.trim() === "1" ? "t" : s.trim() === "-1" ? "-t" : `${s.trim()}t`) : `\\left(${tx}\\right)t`;
+  };
+  const e1 = Math.abs(evalNum(l1)) < 1e-12 ? "" : `e^{${lamExp(l1)}}`;
+  const e2 = Math.abs(evalNum(l2)) < 1e-12 ? "" : `e^{${lamExp(l2)}}`;
+  const V1 = texVec(v1), V2 = texVec(v2);
+  const term = (c, e, V, first) => {
+    if (Math.abs(c) < 1e-12) return "";
+    const f = fracTex(Math.abs(c));
+    const coef = f === "1" ? "" : f;
+    const sign = c < 0 ? (first ? "-" : " - ") : (first ? "" : " + ");
+    return `${sign}${coef}${e}${V}`;
+  };
+  const rows = [`\\vec x(t) &= c_1${e1}${V1} + c_2${e2}${V2}`];
+  for (const p of pts) {
+    const c1 = (p.x * b2 - a2 * p.y) / det, c2 = (a1 * p.y - b1 * p.x) / det;
+    let rhs = term(c1, e1, V1, true);
+    rhs += term(c2, e2, V2, !rhs);
+    if (!rhs) rhs = "\\vec 0";
+    rows.push(`\\text{from }(${fmtNum(p.x).replace("−", "-")},\\ ${fmtNum(p.y).replace("−", "-")})\\!:\\quad c_1 = ${fracTex(c1)},\\ c_2 = ${fracTex(c2)} &\\quad\\Rightarrow\\quad \\vec x(t) = ${rhs}`);
+  }
+  return "$$\n\\begin{aligned}\n" + rows.join("\\\\\n") + "\n\\end{aligned}\n$$";
 }
 
 // parse a phase-plane block: "A = a b c d" (or "a b c d"), optional "range = 5"
 function parsePhaseBlock(src) {
-  let A = null, range = null;
+  let A = null, range = null, points = [];
   for (const raw of src.split(/\r?\n/)) {
     const line = raw.trim();
     if (!line) continue;
+    const pm = line.match(/^points?\s*=\s*(.+)$/i);
+    if (pm) { points = parsePoints(pm[1]); continue; }
     const r = line.match(/^range\s*=\s*(.+)$/i);
     if (r) { range = evalNum(r[1]); continue; }
     const m = line.replace(/^A\s*=\s*/i, "").replace(/[\[\],;]/g, " ").trim().split(/\s+/);
@@ -320,10 +426,11 @@ function parsePhaseBlock(src) {
   }
   if (!A) throw new Error("write the matrix as  A = a b c d  (row by row)");
   if (!range || range <= 0) {
-    // default window: 3, a little bigger if that's too small to see anything interesting
-    range = 3;
+    // default window: 3, or big enough to show every starting point
+    const far = Math.max(0, ...points.map(p => Math.max(Math.abs(p.x), Math.abs(p.y))));
+    range = Math.max(3, Math.ceil(far * 1.3));
   }
-  return { A, range };
+  return { A, range, points };
 }
 
 // ---------- finding julia ----------
@@ -384,21 +491,21 @@ class EigenInline extends obsidian.Plugin {
         let end = m.index + m[0].length;
         const eq = text.slice(end).match(/^\s*=/);
         if (eq) end += eq[0].length;
-        this.start(editor, info, ln, m.index, end, m[1]);
+        this.start(editor, info, ln, m.index, end, m[1], m[2]);
       },
     });
 
     // ```phase-plane``` code blocks: A = a b c d (row by row), optional range = 5
     this.registerMarkdownCodeBlockProcessor("phase-plane", (src, el) => {
       try {
-        const { A, range } = parsePhaseBlock(src);
+        const { A, range, points } = parsePhaseBlock(src);
         const box = el.createDiv({ cls: "eigen-phase-plane" });
         box.style.margin = "0.5em 0";
         const pic = box.createDiv();
-        pic.innerHTML = phaseSVG(A, { range });
+        pic.innerHTML = phaseSVG(A, { range, points });
         const cap = box.createDiv();
         cap.style.marginTop = "4px";
-        cap.innerHTML = phaseCaption(A);
+        cap.innerHTML = phaseCaption(A, points);
       } catch (e) {
         el.createEl("pre", { text: "phase-plane: " + e.message });
       }
@@ -413,11 +520,16 @@ class EigenInline extends obsidian.Plugin {
     if (!before.endsWith("=")) return;
     const m = before.match(TRIGGER_RE);
     if (!m) return;
-    this.start(editor, info, cur.line, cur.ch - m[0].length, cur.ch, m[1]);
+    this.start(editor, info, cur.line, cur.ch - m[0].length, cur.ch, m[1], m[2]);
   }
 
-  async start(editor, info, line, from, to, argText) {
+  async start(editor, info, line, from, to, argText, ptsText) {
     const args = splitArgs(argText);
+    let pts = [];
+    if (ptsText && ptsText.trim()) {
+      try { pts = parsePoints(ptsText); }
+      catch (e) { new obsidian.Notice("eigen(): " + e.message, 8000); return; }
+    }
     if (args.length !== 4) {
       new obsidian.Notice(`eigen() needs 4 numbers (a, b, c, d row by row), got ${args.length}.`);
       return;
@@ -430,8 +542,10 @@ class EigenInline extends obsidian.Plugin {
     try {
       const out = await this.compute(args);
       replacement = formatResult(args, out, this.settings.showDecimals);
-      if (this.settings.phasePlane) {
-        replacement += "\n```phase-plane\nA = " + args.join(" ") + "\n```";
+      if (pts.length) replacement += "\n" + formatParticular(out, pts);
+      if (this.settings.phasePlane || pts.length) {
+        replacement += "\n```phase-plane\nA = " + args.join(" ") +
+          (pts.length ? "\npoints = " + pts.map(p => `(${p.raw[0]},${p.raw[1]})`).join(" ") : "") + "\n```";
       }
       // a $$ block needs its own lines
       const lineText = editor.getLine(line) || "";
@@ -440,7 +554,7 @@ class EigenInline extends obsidian.Plugin {
       if (idx >= 0 && lineText.slice(idx + tag.length).trim()) replacement += "\n";
     } catch (e) {
       new obsidian.Notice("eigen(): " + e.message, 10000);
-      replacement = `eigen(${args.join(", ")})`;
+      replacement = `eigen(${args.join(", ")})` + (ptsText ? `[${ptsText}]` : "");
     }
     await this.swap(editor, file, tag, replacement);
   }
@@ -515,4 +629,4 @@ class EigenSettings extends obsidian.PluginSettingTab {
 }
 
 module.exports = EigenInline;
-module.exports._test = { splitArgs, formatResult, TRIGGER_RE, phaseSVG, phaseCaption, parsePhaseBlock };
+module.exports._test = { splitArgs, formatResult, TRIGGER_RE, phaseSVG, phaseCaption, parsePhaseBlock, parsePoints, formatParticular, fracTex };

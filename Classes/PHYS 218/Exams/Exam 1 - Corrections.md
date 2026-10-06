@@ -51,24 +51,24 @@ $$\vec F_2 = \boxed{k\,\frac{Qq}{(a+d)^2}\,\hat\imath}\quad \text{(also points i
 
 ### (a)(iii) (4 pts) The net force on $q$ · 2/4
 $${\color{#e5484d} \vec F_{net} = \left(-\frac{kQq}{(a+d)^2} - \frac{4kQq}{a^2}\right)\hat\imath = \frac{-kQq\left(a^2 + (a+d)^2\right)}{a^2(a+d)^2}\,\hat\imath}$$
-<span style="color:#e5484d">Both terms are negative (this contradicts (i) and (ii)), the factor of 4 is dropped in the combined fraction, and there's no drawing of $\vec F_{net}$.</span>
+Both terms are negative (this contradicts (i) and (ii)), the factor of 4 is dropped in the combined fraction, and there's no drawing of $\vec F_{net}$.
 $${\color{#30a46c} \vec F_{net} = kQq\left[\frac{4}{a^2} + \frac{1}{(a+d)^2}\right]\hat\imath = kQq\,\frac{4(a+d)^2 + a^2}{a^2(a+d)^2}\,\hat\imath}$$
-<span style="color:#30a46c">Drawing: $\vec F_1$ is a long arrow to the right, $\vec F_2$ is a much shorter arrow to the right (since $a \ll d$), and $\vec F_{net}$ is slightly longer than $\vec F_1$, also to the right.</span>
+Drawing: $\vec F_1$ is a long arrow to the right, $\vec F_2$ is a much shorter arrow to the right (since $a \ll d$), and $\vec F_{net}$ is slightly longer than $\vec F_1$, also to the right.
 
 > **(b)** Express your answers in terms of $Q$, $d$, and $k$ (the distance $a$ is not part of these questions).
 
 ### (b)(i) (7 pts) What $x$-coordinate $x_0$ (not infinity) could $q$ be placed at such that the net force on it is zero? · 6/7
 Your work: $F = 0$ where $E_1 = E_2$
 $${\color{#e5484d} \frac{-4kQ}{(d-x)^2} = \frac{-kQ}{(x-d)^2} \;\to\; \frac{2}{d-x} = \frac{1}{x-d} \;\to\; 2x - 2d = d - x \;\to\; \boxed{x_0 = d}}$$
-<span style="color:#e5484d">$x_0 = d$ is exactly where $q_2$ sits, so the force there is infinite, not zero. Two errors: the distance to $q_1$ is $x$, not $d-x$; and $(x-d)^2 = (d-x)^2$, so the square roots must match.</span>
+$x_0 = d$ is exactly where $q_2$ sits, so the force there is infinite, not zero. Two errors: the distance to $q_1$ is $x$, not $d-x$; and $(x-d)^2 = (d-x)^2$, so the square roots must match.
 
 <span style="color:#30a46c">Both charges are negative, so positive $q$ is attracted to both. The pulls can only cancel <b>between</b> them ($0 < x < d$):</span>
 $${\color{#30a46c} \frac{4kQq}{x^2} = \frac{kQq}{(d-x)^2} \;\Longrightarrow\; \frac{2}{x} = \frac{1}{d-x} \;\Longrightarrow\; \boxed{x_0 = \tfrac{2d}{3}}}$$
-<span style="color:#30a46c">Sanity check: $x_0$ is closer to the weaker charge $q_2$. ✓</span>
+Sanity check: $x_0$ is closer to the weaker charge $q_2$. ✓
 
 ### (b)(ii) (6 pts) What is the electric potential $V$ at that position? Assume $V \to 0$ as $x \to \pm\infty$. · 1/6
 $${\color{#e5484d} V(x_0) = V(d) = V(q_2) - V(\infty) = -\int_\infty^{q_2} \frac{-kQ}{r^2}\,dr = kQ\left(-\frac{1}{q_2} - 0\right) \;\Rightarrow\; \boxed{V(d) = -\frac{kQ}{q_2} = \frac{-kQ}{-Q} = k}}$$
-<span style="color:#e5484d">This integrates only $E_2$ (ignores $q_1$), uses the charge $q_2$ as a position, and gives $V = k$, which has units of N·m²/C², not volts.</span>
+This integrates only $E_2$ (ignores $q_1$), uses the charge $q_2$ as a position, and gives $V = k$, which has units of N·m²/C², not volts.
 
 <span style="color:#30a46c">Grader's note: <b>use $V = V_1 + V_2$</b>. Potential is a scalar and $V = kq/r$ is on the formula sheet:</span>
 $${\color{#30a46c} V(x_0) = \frac{k(-4Q)}{2d/3} + \frac{k(-Q)}{d/3} = -\frac{6kQ}{d} - \frac{3kQ}{d} = \boxed{-\frac{9kQ}{d}}}$$
@@ -96,12 +96,12 @@ $$
 ### (d) (4 pts) Is $E(r)$ continuous at $r = R_1$? At $r = R_2$? · 2/4
 Insert $R_1$ into $E(r)$ for $R_1 < r < R_2$ $\to 0$.
 $${\color{#e5484d} E(r)\ \text{not continuous at } r = R_1\text{, vertical jump}}\text{, but continuous at } r = R_2\ {\color{#e5484d} \text{(linear to exponential decay)}}$$
-<span style="color:#e5484d">Your own check (plugging in $R_1$ gives 0) proves it IS continuous at $R_1$. "Linear" and "exponential" are also wrong: inside, $E \propto r - R_1^3/r^2$, and outside, $E \propto 1/r^2$ (a power law).</span>
+Your own check (plugging in $R_1$ gives 0) proves it IS continuous at $R_1$. "Linear" and "exponential" are also wrong: inside, $E \propto r - R_1^3/r^2$, and outside, $E \propto 1/r^2$ (a power law).
 
 <span style="color:#30a46c"><b>Continuous at both.</b> $E$ only jumps where there's a <b>surface</b> charge $\sigma$ (jump $= \sigma/\varepsilon_0$). A volume charge $\rho$ never makes $E$ jump, and $V$ is always continuous.</span>
 
 ### (e) (3 pts) Sketch $E(r)$ vs $r$. Indicate $R_1$ and $R_2$. · 2/3
-<span style="color:#e5484d">Your sketch: a point at $R_1$ then an "$(r)$ term" rising to $R_2$ and a "$1/r^2$ term" falling. It showed a jump at $R_1$.</span>
+Your sketch: a point at $R_1$ then an "$(r)$ term" rising to $R_2$ and a "$1/r^2$ term" falling. It showed a jump at $R_1$.
 
 <span style="color:#30a46c">Correct: starts at <b>0</b> at $R_1$ with <b>no jump</b>, rises to a peak at $R_2$, then falls as $1/r^2$. (Plot uses $R_1 = 1$, $R_2 = 2$, $\rho/3\varepsilon_0 = 1$.)</span>
 ```desmos-graph
@@ -137,7 +137,7 @@ Grader: *"Generally right approach"* · *"check dimensions"*
 
 ### (a) (4 pts) New surface charge density $\sigma_{in}$ on the inner surface? · 2/4
 $${\color{#e5484d} \boxed{\sigma_{inner} = -\lambda}} \quad (\vec E \text{ must} = 0 \text{ in the conductor};\ q_{rod} + q_{inner} = 0)$$
-<span style="color:#e5484d">$\sigma$ is C/m² and $\lambda$ is C/m, so they can't be equal. The reasoning is right; the units aren't.</span>
+$\sigma$ is C/m² and $\lambda$ is C/m, so they can't be equal. The reasoning is right; the units aren't.
 $${\color{#30a46c} \sigma_{in} = -\frac{\lambda}{2\pi R_1}}$$
 
 ### (b) (4 pts) New surface charge density $\sigma_{out}$ on the outer surface? · 3/4
@@ -152,7 +152,7 @@ R_1 < r < R_2:&\quad \boxed{\vec E = 0} \quad \text{(no } \vec E \text{ in a con
 r > R_2:&\quad {\color{#e5484d} \boxed{\vec E = \tfrac12(\sigma + \lambda)\,r\,\hat r}}
 \end{align}
 $$
-<span style="color:#e5484d">This grows with $r$, has no $\varepsilon_0$, and adds $\sigma$ to $\lambda$ (different units). You wrote the right enclosed charge $\frac{\sigma 2\pi R_2 L + \lambda L}{\varepsilon_0}$ but didn't finish the algebra.</span>
+This grows with $r$, has no $\varepsilon_0$, and adds $\sigma$ to $\lambda$ (different units). You wrote the right enclosed charge $\frac{\sigma 2\pi R_2 L + \lambda L}{\varepsilon_0}$ but didn't finish the algebra.
 $${\color{#30a46c} E(2\pi rL) = \frac{(2\pi R_2\sigma + \lambda)L}{\varepsilon_0} \;\Longrightarrow\; \vec E = \frac{2\pi R_2\sigma + \lambda}{2\pi\varepsilon_0 r}\,\hat r}$$
 
 ### (d) (3 pts) Sketch $E(r)$. Indicate $R_1$ and $R_2$. · 3/3
@@ -179,7 +179,7 @@ r > R_2:&\quad V = -\frac{2\pi R_2\sigma + \lambda}{2\pi\varepsilon_0}\ln\frac{r
 $$
 
 ### (f) (3 pts) Sketch $V(r)$. Indicate $R_1$ and $R_2$. · 2/3
-<span style="color:#e5484d">Your sketch: a finite value at $r = 0$ curving down to a flat "c term" plateau above 0, then an "$-r^2$ term" dropping off.</span>
+Your sketch: a finite value at $r = 0$ curving down to a flat "c term" plateau above 0, then an "$-r^2$ term" dropping off.
 
 <span style="color:#30a46c">Correct: $V \to +\infty$ as $r \to 0$, falls like a log to <b>0 at $R_1$</b>, stays flat at 0 through the conductor, then decreases like a log (negative) for $r > R_2$. (Plot uses $R_1 = 1$, $R_2 = 2$, $\lambda/2\pi\varepsilon_0 = 1$, outer coefficient $= 2$.)</span>
 ```desmos-graph
@@ -199,23 +199,23 @@ x=2|dashed|#8a8985
 
 ### (a) (3 pts) A small patch of charge $dq$ at distance $r$ from the center of the disk: what is its contribution $dV$ to the potential? · 3/3
 $$V = k\int\frac{dq}{r} \;\to\; dV = k\frac{dq}{r} = {\color{#e5484d} \boxed{k\frac{\sigma\,dA}{r}}}$$
-<span style="color:#e5484d">Graded full credit, but the denominator must be the distance from the patch to the point $P$ on the axis, not $r$ (the distance to the disk's center).</span>
+Graded full credit, but the denominator must be the distance from the patch to the point $P$ on the axis, not $r$ (the distance to the disk's center).
 $${\color{#30a46c} dV = k\frac{\sigma\,dA}{\sqrt{x^2 + r^2}}}$$
 
 ### (b) (8 pts) Determine $V(x)$ along the $x$-axis. Assume $V \to 0$ as $x \to \pm\infty$. · 2/8
 $${\color{#e5484d} V(x) = -k\int\frac{Q(2\pi r\ldots)}{\sqrt{x^2 + r^2}}\ \ldots}$$
-<span style="color:#e5484d">Grader: "Need to integrate over disk area. Involves $\int\frac{r}{\sqrt{x^2+r^2}}\,dr$."</span>
+Grader: "Need to integrate over disk area. Involves $\int\frac{r}{\sqrt{x^2+r^2}}\,dr$."
 
-<span style="color:#30a46c">Split the disk into rings: $dq = \sigma(2\pi r\,dr)$. Every point on a ring is $\sqrt{x^2 + r^2}$ from $P$.</span>
+Split the disk into rings: $dq = \sigma(2\pi r\,dr)$. Every point on a ring is $\sqrt{x^2 + r^2}$ from $P$.
 $${\color{#30a46c} V(x) = k\sigma\int_0^{R_0}\frac{2\pi r\,dr}{\sqrt{x^2 + r^2}} = \frac{\sigma}{2\varepsilon_0}\left(\sqrt{x^2 + R_0^2} - |x|\right)}$$
 
 ### (c) (8 pts) Determine $\vec E(x)$ along the $x$-axis. · 1/8
 $${\color{#e5484d} \vec E(x) = k\frac{Q\pi r^2}{(x^2 + r^2)}\cos\theta\ \hat\imath}$$
 $${\color{#30a46c} \vec E(x) = -\frac{dV}{dx}\,\hat\imath = \frac{\sigma}{2\varepsilon_0}\left(\operatorname{sgn}(x) - \frac{x}{\sqrt{x^2 + R_0^2}}\right)\hat\imath}$$
-<span style="color:#30a46c">Checks: near the disk ($x \to 0^+$), $E \to \sigma/2\varepsilon_0$ (the infinite-plane result). Far away, $V \to kQ/|x|$ and $E \to kQ/x^2$ (a point charge).</span>
+Checks: near the disk ($x \to 0^+$), $E \to \sigma/2\varepsilon_0$ (the infinite-plane result). Far away, $V \to kQ/|x|$ and $E \to kQ/x^2$ (a point charge).
 
 ### (d) (6 pts) Sketch $V(x)$ and $E(x)$. · 0/8
-<span style="color:#e5484d">Left blank ("ran out of time here"). Guess on the back: both positive and getting weaker as $x$ increases, covering $x > 0$ only.</span> Grader: *"Give your best guess."*
+Left blank ("ran out of time here"). Guess on the back: both positive and getting weaker as $x$ increases, covering $x > 0$ only. Grader: *"Give your best guess."*
 
 <span style="color:#30a46c">$V(x)$: a symmetric peak at $x = 0$ with height $\sigma R_0/2\varepsilon_0$, a sharp point at $x = 0$, decaying on both sides. $E(x)$: an <b>odd</b> function that jumps from $-\sigma/2\varepsilon_0$ to $+\sigma/2\varepsilon_0$ at $x = 0$ (a surface charge), then decays. (Plots use $\sigma/2\varepsilon_0 = 1$, $R_0 = 1$.)</span>
 ```desmos-graph
@@ -225,7 +225,7 @@ y=\sqrt{x^2+1}-\left|x\right||#30a46c|label:V(x)
 y=1-x/\sqrt{x^2+1}|x>0|#2a78d6
 y=-1-x/\sqrt{x^2+1}|x<0|#2a78d6
 ```
-<span style="color:#30a46c">Green = $V(x)$, blue = $E(x)$.</span>
+Green = $V(x)$, blue = $E(x)$.
 
 ---
 

@@ -41,6 +41,7 @@ Fall 2026 · Fort Lewis College
 
 ## Study
 - Flashcards: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] · [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - MATH 327]]. Click the cards icon in the left sidebar and pick a deck (`physics` has `circuits` and `electrostatics` inside it).
+- PHYS 218 chapter notes, Ch 5–16 (formulas section by section): start at [[Ch 05 - Electric Charges and Fields]] or see the table in [[PHYS 218]]
 - [[Physics Intuition - Ch 5-10]]: PHYS 218 intuition guide, the why behind charges, fields, potential, capacitors and circuits
 - [[Exam 2 Review - Ch 9 and 10]]: PHYS 218 circuits exam review with derivations, a practice exam and an answer key
 - [[Quiz Prep - HW 9.2 and 10.1]]: PHYS 218 practice quiz with an answer key
@@ -52,7 +53,7 @@ Fall 2026 · Fort Lewis College
 - [[Plugin Guide]]: Desmos, TikZ circuits, flashcards, Dataview, templates
 
 ## Vault layout
-- **Classes:** one folder per class. Each has a hub note that auto-lists everything for that class, plus subfolders such as `Notes`, `Lectures`, `Homework & Quizzes`, `Exams`, `Flashcards` and `Tools`
+- **Classes:** one folder per class. Each has a hub note that auto-lists everything for that class, plus subfolders such as `Chapter Notes`, `Notes`, `Lectures`, `Worksheets`, `Homework & Quizzes`, `Exams`, `Flashcards` and `Tools`
 - **Guides:** how-tos for this vault
 - **Templates:** Class Note template
 - **attachments:** images, sorted by class (new pasted images land here automatically)

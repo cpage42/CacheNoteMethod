@@ -29,7 +29,14 @@ canvas: https://courses.fortlewis.edu/courses/36144
 > - Tue 10/13 11:59 PM: *Worksheet 6*
 > - Fri 10/16 · Tue 10/20 · Fri 10/23: WebWork *Repeated Eigens* · *Non Homogeneous* · *Second Order*
 
-## Notes
+## Lectures (in order)
+1. [[Intro to Systems of DEs]] (W6 Mon)
+2. [[Phase Planes and Eigenvectors]] (W6 Wed)
+3. [[Complex Eigenvalues]] (W7 Mon)
+
+Tools: [[Eigen Calculator & DEch]] · Scratch: [[Phase planes scratch]] · Flashcards: [[Flashcards - MATH 327]]
+
+## All notes
 ```dataview
 LIST FROM [[]] WHERE file.name != "Home" SORT file.ctime ASC
 ```
