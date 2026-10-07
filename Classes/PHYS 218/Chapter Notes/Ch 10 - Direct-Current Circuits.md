@@ -5,7 +5,7 @@ textbook: "UPV2 Ch 10"
 tags: [chapter-notes, circuits, kirchhoff, rc-circuits]
 ---
 # Ch 10: Direct-Current Circuits
-Class: [[PHYS 218]] · Previous: [[Ch 09 - Current and Resistance]] · Next: [[Ch 11 - Magnetic Forces and Fields]] · Full review: [[Exam 2 Review - Ch 9 and 10]] · Section notes: [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · Drill: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+Class: [[PHYS 218]] · Previous: [[Ch 09 - Current and Resistance]] · Next: [[Ch 11 - Magnetic Forces and Fields]] · Full review: [[Exam 2 Review - Ch 8-10]] · Section notes: [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · Drill: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
 > [!abstract] The chapter in three lines
 > A battery is an emf $\varepsilon$ with a small internal resistance $r$. Networks of resistors reduce with **series and parallel** rules, and anything harder is solved with **Kirchhoff's rules** (charge conserved at junctions, energy conserved around loops). Add a capacitor and the circuit changes over time with time constant $\tau = RC$.

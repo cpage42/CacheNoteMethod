@@ -1,5 +1,5 @@
 #flashcards/physics/electrostatics
-Back to [[Home]] · Class: [[PHYS 218]] · Mistakes to learn from: [[Exam 1 - Corrections]] · Other deck: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+Back to [[Home]] · Class: [[PHYS 218]] · Mistakes to learn from: [[Exam 1 - Corrections]] · Chapter notes: [[Ch 05 - Electric Charges and Fields]] · [[Ch 06 - Gauss's Law]] · [[Ch 07 - Electric Potential]] · [[Ch 08 - Capacitance]] · Other decks: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] · [[Flashcards - PHYS 218 Magnetism (Ch 11-16)]]
 
 Covers Ch 5 (charges and fields), Ch 6 (Gauss's law), Ch 7 (electric potential) and Ch 8 (capacitance). This is Exam 1 material, and it all comes back on the cumulative final. Study: Ctrl+P → "Review flashcards in this note", or pick `physics → electrostatics` in the flashcard sidebar.
 
@@ -35,6 +35,9 @@ Torque and energy of a dipole in a field::$\vec\tau = \vec p\times\vec E$, $U = 
 Dipole field far away::falls off as $1/r^{3}$ (on the axis: $E = 2kp/r^{3}$)
 
 ## Ch 6: Gauss's law
+Gauss's law plane vs. conductor surface::infinite sheet of charge: $E = \frac{\sigma}{2\varepsilon_{0}}$; just outside a conductor: $E = \frac{\sigma}{\varepsilon_{0}}$
+Field of a uniform solid ball at its surface::$E = \frac{kQ}{R^{2}}$; the inside ($kQr/R^{3}$) and outside ($kQ/r^{2}$) formulas agree at $r = R$
+Gauss's-law problem recipe::pick the symmetry → matching Gaussian surface through the point → $E$ constant and parallel to $d\vec A$ (or perpendicular) → find $q_{enc}$ → solve $EA = q_{enc}/\varepsilon_{0}$
 Electric flux::$\Phi = \int \vec E\cdot d\vec A$ ($= EA\cos\theta$ for a uniform field and flat surface)
 Gauss's law::$\oint \vec E\cdot d\vec A = \frac{q_{enc}}{\varepsilon_{0}}$
 Net flux through a closed surface with no charge inside::zero (as many field lines leave as enter)

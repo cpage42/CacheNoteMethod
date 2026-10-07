@@ -5,7 +5,7 @@ textbook: "UPV2 Ch 9"
 tags: [chapter-notes, circuits, current, resistance, power]
 ---
 # Ch 9: Current and Resistance
-Class: [[PHYS 218]] · Previous: [[Ch 08 - Capacitance]] · Next: [[Ch 10 - Direct-Current Circuits]] · Full review: [[Exam 2 Review - Ch 9 and 10]] · Deeper: [[Physics Intuition - Ch 5-10#Ch 9: Current and resistance]] · Drill: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+Class: [[PHYS 218]] · Previous: [[Ch 08 - Capacitance]] · Next: [[Ch 10 - Direct-Current Circuits]] · Full review: [[Exam 2 Review - Ch 8-10]] · Deeper: [[Physics Intuition - Ch 5-10#Ch 9: Current and resistance]] · Drill: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
 > [!abstract] The chapter in three lines
 > **Current** is the rate charge flows, carried by electrons drifting slowly through a wire. A material's **resistivity** and a wire's shape set its **resistance**, and for ohmic materials $V = IR$. Pushing current through resistance turns electrical energy into heat at a rate $P = IV$.

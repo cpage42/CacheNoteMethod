@@ -22,9 +22,7 @@ canvas: https://courses.fortlewis.edu/courses/36144
 **Policies:** 3 free absences. No make-up exams unless documented emergency. Devices/AI forbidden on exams.
 **Tools:** WebWork (via Canvas) · Insight Maker · Julia DE Checker & Eigen Calculator (Canvas → Technology Links) · [Class notes site](https://pub.pretext.plus/o/c37e31ca-1114-4043-aa68-257a6695ed9c/website/ho-syllabus-fall-26.html)
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 1)
-> - Fri 10/2 11:59 PM: WebWork *Phase Planes*
-> - Tue 10/6 11:59 PM: *Worksheet 5* (2 Shops)
+> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
 > - Wed 10/7 11:59 PM: WebWork *Systems Complex Eigens*
 > - Tue 10/13 11:59 PM: *Worksheet 6*
 > - Fri 10/16 · Tue 10/20 · Fri 10/23: WebWork *Repeated Eigens* · *Non Homogeneous* · *Second Order*

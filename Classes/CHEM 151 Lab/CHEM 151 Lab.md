@@ -34,9 +34,10 @@ canvas: https://courses.fortlewis.edu/courses/35744
 | 15 | 11/30 | **Final lab practical exam** |
 | 16 | 12/7 | Make-up practical (if needed), 2:15–3:45 PM |
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 1)
-> - Mon 10/5 1:25 PM: Week 7 lab preparation
-> - Wed 10/7 11:59 PM: Equilibrium Constant notebook upload
+> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
+> - Wed 10/7 11:59 PM: Equilibrium Constant lab notebook upload
+> - No lab next week (Mon 10/12)
+> - **Mon 10/19 1:25 PM: Mid-Term Lab Practical**
 
 ## Notes
 ```dataview

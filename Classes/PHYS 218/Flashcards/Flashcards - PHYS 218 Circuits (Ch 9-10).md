@@ -1,5 +1,5 @@
 #flashcards/physics/circuits
-Back to [[Home]] · Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 9 and 10]] · Other deck: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]]
+Back to [[Home]] · Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 8-10]] · Chapter notes: [[Ch 09 - Current and Resistance]] · [[Ch 10 - Direct-Current Circuits]] · [[10.4 Electrical Measuring Instruments]] · Other decks: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Magnetism (Ch 11-16)]]
 
 Covers all of Ch 9 (current and resistance) and Ch 10 (DC circuits). Study: Ctrl+P → "Review flashcards in this note", or pick `physics → circuits` in the flashcard sidebar.
 
@@ -102,6 +102,10 @@ How to check a Kirchhoff answer::try a loop you didn't use, or check power: sour
 When is a battery being charged in a circuit?::when current flows into its $+$ terminal (from + to − inside it)
 
 ## Meters
+Voltmeter connected in series by mistake::its huge resistance acts like a break; current drops to almost zero and it reads about the source voltage
+What a voltmeter reads across a battery::the terminal voltage $\varepsilon - Ir$; it equals $\varepsilon$ only when no current flows
+Ohmmeter rules::isolate the part (or you read the whole network's $R_{eq}$) and never use it on a live circuit
+Why digital meters are more accurate::they need less current to register, so they can have higher resistance (voltmeter) and disturb the circuit less
 Ammeter: series or parallel? Resistance?::in series, very small resistance
 Voltmeter: series or parallel? Resistance?::in parallel, very large resistance
 Turning a galvanometer into an ammeter::small shunt in parallel: $R_{sh} = \frac{I_{G}R_{G}}{I - I_{G}}$

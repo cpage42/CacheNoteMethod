@@ -12,7 +12,6 @@ My Obsidian vault for class notes at Fort Lewis College (physics, math, chemistr
 - **`eigen()` shortcut**: type `eigen(1,2,3,4)=` in any note (matrix entries row by row). As soon as you type the equals sign, it's replaced with the eigenvalues and eigenvectors as a LaTeX block. This is the small `eigen-inline` plugin in `.obsidian/plugins/eigen-inline`.
 - **Guides/**: how the vault is set up, the plugins, and keyboard shortcuts. Start with `START HERE - Shortcuts`.
 - **Templates/**: the class note template.
-- **Archive/**: old versions, including the original Python tool (`de_tools.py`), which the Julia scripts replaced.
 
 ## Setup
 

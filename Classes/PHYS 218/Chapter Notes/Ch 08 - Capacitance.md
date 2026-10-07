@@ -5,7 +5,7 @@ textbook: "UPV2 Ch 8"
 tags: [chapter-notes, electrostatics, capacitance, capacitors, dielectrics]
 ---
 # Ch 8: Capacitance
-Class: [[PHYS 218]] · Previous: [[Ch 07 - Electric Potential]] · Next: [[Ch 09 - Current and Resistance]] · Deeper: [[Physics Intuition - Ch 5-10#Ch 8: Capacitance]] · Drill: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]]
+Class: [[PHYS 218]] · Previous: [[Ch 07 - Electric Potential]] · Next: [[Ch 09 - Current and Resistance]] · Deeper: [[Physics Intuition - Ch 5-10#Ch 8: Capacitance]] · Drill: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · On Exam 2 too: [[Exam 2 Review - Ch 8-10]]
 
 > [!abstract] The chapter in three lines
 > A **capacitor** is two conductors holding $+Q$ and $-Q$. Its **capacitance** $C = Q/V$ depends only on geometry, and it stores energy $\tfrac12 CV^2$ in the field between the plates. Filling the gap with a **dielectric** multiplies $C$ by $\kappa$.

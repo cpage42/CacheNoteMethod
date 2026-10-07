@@ -1,5 +1,5 @@
 # RC Circuits
-Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 9 and 10]]
+Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 8-10]]
 
 > [!abstract] Big picture
 > A resistor and a capacitor in series. The capacitor can't charge or discharge instantly. Charge flows through the resistor, which limits the current, so everything changes **exponentially** with time constant $\tau = RC$.
@@ -27,6 +27,74 @@ Class: [[PHYS 218]] · Review: [[Exam 2 Review - Ch 9 and 10]]
 - **S to b (discharging):** the battery is out of the loop, and the charged capacitor drives current back through $R$ until it's empty.
 
 ---
+
+## Intuition first: how to read every RC formula
+*Read this before the derivations. Every formula below is the same idea written a few ways.*
+
+### The picture: filling a bucket through a narrow hose
+- The **capacitor** is a bucket. The **battery** is a water tower at height $\varepsilon$. The **resistor** is a narrow hose between them.
+- When the bucket is empty, the height difference is big, so water rushes in. As the bucket fills, the difference shrinks, so the flow slows to a trickle.
+- **The flow depends on how much is left to fill.** That one sentence is why everything is exponential.
+
+### The key piece: $e^{-t/\tau}$ = "fraction still left to go"
+| Time | $e^{-t/\tau}$ (left to go) | $1 - e^{-t/\tau}$ (done) |
+|---|---|---|
+| $0$ | 100% | 0% |
+| $1\tau$ | 37% | 63% |
+| $2\tau$ | 14% | 86% |
+| $3\tau$ | 5% | 95% |
+| $5\tau$ | under 1% | over 99% ("done") |
+
+- Every $\tau$, whatever is left gets multiplied by 0.37. It never quite reaches the end, but after $5\tau$ you can call it done.
+- $\tau = RC$ is the speed. A bigger $R$ is a narrower hose and a bigger $C$ is a bigger bucket. Both make it slower.
+- **Reading rule:** if a formula has $e^{-t/\tau}$, the quantity **fades away**. If it has $1 - e^{-t/\tau}$, the quantity **builds up**.
+
+### Charging: the battery's voltage gets shared
+At every instant the loop rule says the battery's voltage is split between the two parts:
+$$\varepsilon = V_R + V_C$$
+At first the empty capacitor takes **none** of it, so the resistor gets **all** of it. As the capacitor fills, it takes more and the resistor gets less. They trade places.
+
+| Formula | In words | Starts at | Ends at |
+|---|---|---|---|
+| $V_C = \varepsilon(1 - e^{-t/\tau})$ | the capacitor's share: fraction **done** × $\varepsilon$ | 0 | $\varepsilon$ |
+| $V_R = \varepsilon e^{-t/\tau}$ | the resistor gets what's left, $\varepsilon - V_C$ | $\varepsilon$ | 0 |
+| $q = C\varepsilon(1 - e^{-t/\tau})$ | just $q = CV_C$: same curve as $V_C$, scaled by $C$ | 0 | $C\varepsilon$ |
+| $I = \dfrac{\varepsilon}{R}e^{-t/\tau}$ | Ohm's law on the resistor, $V_R/R$ | $\varepsilon/R$ | 0 |
+
+> [!tip] You only have to memorize one
+> Remember $V_C = \varepsilon(1 - e^{-t/\tau})$. Then $V_R = \varepsilon - V_C$, $\ q = CV_C$, and $I = V_R/R$. Every other charging formula falls out in one line.
+
+> [!example] Why the current starts big and dies
+> At $t = 0$ the capacitor has no charge, so it has no voltage. It acts like a **wire**, and the current is as if only the resistor were there: $\varepsilon/R$. At the end it's full and pushes back with the full $\varepsilon$. Nothing is left to drive current, so it acts like a **break**.
+
+### Discharging: the capacitor is the battery now
+- No battery. The charged capacitor pushes current through the resistor by itself, and they're connected straight across each other, so they share one voltage: $V_C = V_R = V$.
+- As charge drains, the voltage drops, so the push gets weaker and the current slows. That's the same "slows as it goes" idea, run backward.
+
+| Formula | In words |
+|---|---|
+| $q = Q_0e^{-t/\tau}$ | starting charge × fraction left |
+| $V = V_0e^{-t/\tau}$ | just $q/C$, so it's the same curve |
+| $I = \dfrac{V_0}{R}e^{-t/\tau}$ | Ohm's law, $V/R$ (flows the **opposite** way to the charging current; some books add a minus sign) |
+
+All three are "start value × fraction left." That's the whole discharge.
+
+### How to attack a problem
+1. **Charging or discharging?** A battery filling the capacitor is charging. A capacitor emptying through a resistor is discharging.
+2. **Find $\tau = RC$ first.** Watch prefixes: kΩ × µF gives milliseconds.
+3. **"What is it at time $t$?"** Plug $t$ in.
+4. **"When does it reach…?"** Set the formula equal to that value, isolate $e^{-t/\tau}$, and take $\ln$.
+   - Half charged: $1 - e^{-t/\tau} = \tfrac12 \Rightarrow t = \tau\ln 2 \approx 0.69\tau$
+   - Down to a fraction $f$: $e^{-t/\tau} = f \Rightarrow t = \tau\ln(1/f)$
+5. **Sanity check** with the picture: did the thing that should grow actually grow, and does it stay under its final value?
+
+> [!question]- Predict, then check (click for answers)
+> 1. You double $R$. What happens to $\tau$, the starting current, and the final charge?
+> 2. Charging: after $2\tau$, what fraction of $\varepsilon$ is across the resistor?
+> 3. Discharging from 10 V: what's the voltage after $3\tau$?
+> 4. Why does the current through a charging capacitor go to zero, even though the battery is still connected?
+>
+> **Answers:** (1) $\tau$ doubles, the starting current $\varepsilon/R$ halves, and the final charge $C\varepsilon$ **doesn't change**. It just takes longer to get there. (2) $e^{-2} \approx 14\%$. (3) $10 \times 0.05 \approx 0.5$ V. (4) The full capacitor's voltage equals $\varepsilon$ and pushes back just as hard, so there's no net voltage left across the resistor to drive current.
 
 ## Charging (S to a)
 

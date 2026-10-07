@@ -47,7 +47,7 @@ Great for: formulas, definitions, units, chem reactions.
 - Any note tagged `#flashcards` becomes a deck. Write cards as `Question::Answer`.
 - Click the **flashcard icon** in the left sidebar (or Ctrl+P → `Review flashcards`) to study.
 - It schedules each card based on how well you knew it.
-- Decks: [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] (tag `#flashcards/physics/circuits`), [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] (tag `#flashcards/physics/electrostatics`) and [[Flashcards - MATH 327]] (tag `#flashcards/math`). Tags like `#flashcards/<name>` make subdecks, so you can practice one class at a time.
+- Decks: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] (`#flashcards/physics/electrostatics`), [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] (`#flashcards/physics/circuits`), [[Flashcards - PHYS 218 Magnetism (Ch 11-16)]] (`#flashcards/physics/magnetism`), [[Flashcards - MATH 327]] (`#flashcards/math`) and [[Flashcards - CHEM 151]] (`#flashcards/chem`). Tags like `#flashcards/<name>` make subdecks, so you can practice one class at a time.
 
 ---
 

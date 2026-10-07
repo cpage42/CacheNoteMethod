@@ -1,13 +1,97 @@
-# Exam 2 Review: Ch 9 and 10 (Current, Resistance, DC Circuits)
-Class: [[PHYS 218]] · Covers all of *University Physics Vol. 2* Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Quiz Prep - HW 9.2 and 10.1]] · [[RC circuits]] · [[Physics Intuition - Ch 5-10]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+# Exam 2 Review: Ch 8–10 (Capacitance, Current, Resistance, DC Circuits)
+Class: [[PHYS 218]] · Exam 2 is **Tue Oct 13** and covers *University Physics Vol. 2* Ch 8 (8.1–8.5), Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Ch 08 - Capacitance]] · [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] · [[RC circuits]] · [[Physics Intuition - Ch 5-10]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
-> [!abstract] Both chapters in one paragraph
-> An electric field inside a wire pushes free charges along slowly (the **drift velocity**), and the rate charge passes a point is the **current**. How hard a material fights that flow is its **resistivity**, and a shaped piece of it has a **resistance** $R = \rho L/A$. For ohmic materials $V = IR$. Pushing current through resistance burns energy at $P = IV$. A **battery** is an emf $\varepsilon$ with a small internal resistance $r$. Wire batteries and resistors into a network and two conservation laws solve everything: charge is conserved at junctions (**KCL**) and energy is conserved around loops (**KVL**). Add a capacitor and the circuit gets a clock, $\tau = RC$.
+> [!abstract] All three chapters in one paragraph
+> A **capacitor** is two conductors holding $\pm Q$. Its capacitance $C = Q/V$ depends only on geometry, it stores energy $\tfrac12CV^2$ in its field, and a dielectric multiplies $C$ by $\kappa$. An electric field inside a wire pushes free charges along slowly (the **drift velocity**), and the rate charge passes a point is the **current**. How hard a material fights that flow is its **resistivity**, and a shaped piece of it has a **resistance** $R = \rho L/A$. For ohmic materials $V = IR$. Pushing current through resistance burns energy at $P = IV$. A **battery** is an emf $\varepsilon$ with a small internal resistance $r$. Wire batteries and resistors into a network and two conservation laws solve everything: charge is conserved at junctions (**KCL**) and energy is conserved around loops (**KVL**). Add a capacitor and the circuit gets a clock, $\tau = RC$.
 
 > [!tip] How to use this
 > 1. Read a section, then cover the formulas and re-derive them. The derivations are short, and they're what the exam tests when it says "show your work."
-> 2. Take the **practice exam** timed (75 min). Write your answers on the blank lines.
+> 2. Take the **practice exam** timed (90 min: Part A is capacitance, Part B is circuits). Write your answers on the blank lines.
 > 3. Check the **answer key** (click to expand). Redo anything you missed the next day.
+
+---
+
+# Part 0: Capacitance (Ch 8)
+*Ch 8 was on Exam 1, and it's on Exam 2 again. It also sets up the RC circuits in 10.5. Short version: [[Ch 08 - Capacitance]].*
+
+## 8.1 Capacitors and capacitance
+
+A **capacitor** is two conductors holding equal and opposite charges, $+Q$ and $-Q$. The **capacitance** is how much charge it holds per volt:
+$$\boxed{C = \frac{Q}{V}}, \qquad 1\ \text{F} = 1\ \text{C/V}$$
+
+- $Q$ is the charge on **one** plate. $V$ is the potential difference between the plates.
+- $C$ depends only on geometry and on the material between the conductors. Doubling $V$ doubles $Q$ and leaves $C$ alone.
+
+> [!tip] Recipe for any capacitance
+> 1. Put $+Q$ on one conductor and $-Q$ on the other.
+> 2. Find $E$ in the gap with Gauss's law.
+> 3. Integrate: $V = \int E\,d\ell$ from one conductor to the other.
+> 4. $C = Q/V$. The $Q$ has to cancel. If it doesn't, something went wrong.
+
+> [!example] Derivation: parallel plates
+> Plates of area $A$, gap $d$, charge $\pm Q$, so $\sigma = Q/A$.
+> 1. Gauss's law with a pillbox gives $E = \dfrac{\sigma}{\varepsilon_0} = \dfrac{Q}{\varepsilon_0 A}$, uniform in the gap.
+> 2. Uniform field: $V = Ed = \dfrac{Qd}{\varepsilon_0 A}$.
+> 3. $$C = \frac{Q}{V} = \boxed{\frac{\varepsilon_0 A}{d}}$$
+> Bigger plates hold more charge per volt, and a smaller gap means less voltage for the same field.
+
+> [!example] Derivation: cylindrical (coaxial) capacitor
+> Inner radius $R_1$, outer radius $R_2$, length $L$, charge $\pm Q$.
+> 1. Gauss with a cylinder of radius $r$ between them: $E(2\pi rL) = Q/\varepsilon_0$, so $E = \dfrac{Q}{2\pi\varepsilon_0 L r}$.
+> 2. $V = \displaystyle\int_{R_1}^{R_2}\frac{Q\,dr}{2\pi\varepsilon_0 L r} = \frac{Q}{2\pi\varepsilon_0 L}\ln\frac{R_2}{R_1}$.
+> 3. $$C = \boxed{\frac{2\pi\varepsilon_0 L}{\ln(R_2/R_1)}}$$
+
+> [!example] Derivation: spherical capacitor
+> Radii $R_1 < R_2$. Gauss gives $E = \dfrac{Q}{4\pi\varepsilon_0 r^2}$, so
+> $$V = \frac{Q}{4\pi\varepsilon_0}\left(\frac{1}{R_1} - \frac{1}{R_2}\right) = \frac{Q}{4\pi\varepsilon_0}\cdot\frac{R_2 - R_1}{R_1R_2} \quad\Longrightarrow\quad \boxed{C = 4\pi\varepsilon_0\frac{R_1R_2}{R_2 - R_1}}$$
+> Let $R_2 \to \infty$ to get an isolated sphere: $C = 4\pi\varepsilon_0 R_1$.
+
+## 8.2 Capacitors in series and parallel
+
+> [!example] Derivation: parallel
+> Every capacitor connects the same two nodes, so they all have the **same voltage** $V$. The charges add: $Q = C_1V + C_2V + \cdots$. Comparing with $Q = C_PV$:
+> $$\boxed{C_P = C_1 + C_2 + \cdots}$$
+
+> [!example] Derivation: series
+> Charge $+Q$ on the first plate induces $-Q$ on the next one, and so on down the chain. Every capacitor ends up with the **same charge** $Q$. The voltages add: $V = \dfrac{Q}{C_1} + \dfrac{Q}{C_2} + \cdots$. Comparing with $V = Q/C_S$:
+> $$\boxed{\frac{1}{C_S} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots}$$
+> For two: $C_S = \dfrac{C_1C_2}{C_1 + C_2}$.
+
+- These rules are the **reverse of resistors**. Series capacitors share charge, and the total is smaller than the smallest. Parallel capacitors share voltage, and the total is bigger than the biggest.
+- **Networks:** collapse the innermost group first, find the total $Q = C_{eq}V$, then work back out. Series pieces get the same $Q$, and parallel pieces get the same $V$.
+
+## 8.3 Energy stored in a capacitor
+
+> [!example] Derivation: $U = Q^2/2C$
+> Charge the capacitor a bit at a time. When it already holds $q$, its voltage is $q/C$, so moving the next $dq$ across takes work $dW = \dfrac{q}{C}\,dq$. Add it up from $0$ to $Q$:
+> $$U = \int_0^Q \frac{q}{C}\,dq = \boxed{\frac{Q^2}{2C} = \frac12 CV^2 = \frac12 QV}$$
+> The $\tfrac12$ appears because the voltage climbs from $0$ to $V$ while you charge it, so the average voltage is $V/2$.
+
+> [!example] Derivation: energy density
+> For parallel plates, $U = \tfrac12CV^2 = \tfrac12\left(\dfrac{\varepsilon_0A}{d}\right)(Ed)^2 = \tfrac12\varepsilon_0E^2\,(Ad)$. The gap's volume is $Ad$, so the energy per volume is
+> $$\boxed{u_E = \tfrac12\varepsilon_0E^2}$$
+> The energy is stored in the **field**, and this holds for any field, not only between plates.
+
+- **Pick the form that uses what stays fixed.** Use $Q^2/2C$ when the capacitor is isolated ($Q$ fixed). Use $\tfrac12CV^2$ when it's connected to a battery ($V$ fixed).
+- When two capacitors share charge through a wire, charge is conserved but energy is **not**. Some energy always turns into heat in the wire. See practice problem C5.
+
+## 8.4–8.5 Dielectrics
+
+Filling the gap with an insulator of **dielectric constant** $\kappa \ge 1$:
+$$\boxed{C = \kappa C_0}, \qquad \varepsilon = \kappa\varepsilon_0$$
+
+> [!example] Why $C$ goes up
+> The field polarizes the dielectric's molecules. That leaves an **induced surface charge** on each face, opposite in sign to the nearby plate. It partly cancels the field: $E = E_0/\kappa$. For the same $Q$, the voltage is $V = Ed = V_0/\kappa$, so $C = Q/V = \kappa C_0$. The induced charge is $Q_i = \left(1 - \dfrac1\kappa\right)Q$.
+
+| First ask: is the battery still connected? | $Q$ fixed (disconnected) | $V$ fixed (connected) |
+|---|---|---|
+| $C$ | $\kappa C_0$ | $\kappa C_0$ |
+| $Q$ | $Q_0$ | $\kappa Q_0$ |
+| $V$ | $V_0/\kappa$ | $V_0$ |
+| $E$ | $E_0/\kappa$ | $E_0$ |
+| $U$ | $U_0/\kappa$ (goes **down**) | $\kappa U_0$ (goes **up**) |
+
+- **Dielectric strength** is the largest field a material can take before it breaks down and conducts. For air it's about $3\times10^6$ V/m. That sets a capacitor's maximum voltage: $V_{max} = E_{max}d$.
 
 ---
 
@@ -225,6 +309,12 @@ Full derivations, graphs and the energy bookkeeping are in [[RC circuits]]. Here
 
 | Idea | Formula |
 |---|---|
+| Capacitance | $C = Q/V$ |
+| Parallel plate | $C = \varepsilon_0A/d$ |
+| Cylindrical / spherical | $C = \dfrac{2\pi\varepsilon_0L}{\ln(R_2/R_1)}$, $\ C = 4\pi\varepsilon_0\dfrac{R_1R_2}{R_2 - R_1}$ |
+| Capacitors in series / parallel | $\dfrac{1}{C_S} = \sum\dfrac{1}{C_i}$ (same $Q$), $\ C_P = \sum C_i$ (same $V$) |
+| Dielectric | $C = \kappa C_0$, $\ E = E_0/\kappa$ ($Q$ fixed) |
+| Energy density | $u_E = \tfrac12\varepsilon_0E^2$ |
 | Current | $I = \dfrac{dQ}{dt}$, $\ Q = \int I\,dt$ |
 | Drift velocity | $I = nqAv_d$, $\ \vec J = nq\vec v_d$ |
 | Current density | $J = I/A$, $\ I = \int \vec J\cdot d\vec A$ |
@@ -247,9 +337,11 @@ Full derivations, graphs and the energy bookkeeping are in [[RC circuits]]. Here
 | Time constant | $\tau = RC$, $\ t_{1/2} = \tau\ln 2$ |
 | Capacitor energy | $U = \tfrac12 CV^2 = \dfrac{Q^2}{2C}$ |
 
-Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $n_{Cu} = 8.47\times10^{28}\ \text{m}^{-3}$, $\rho_{Cu} = 1.68\times10^{-8}\ \Omega\cdot\text{m}$, $\alpha_{Cu} = 3.9\times10^{-3}\ /°\text{C}$
+Constants: $\varepsilon_0 = 8.854\times10^{-12}\ \text{C}^2/(\text{N}\cdot\text{m}^2)$, $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $n_{Cu} = 8.47\times10^{28}\ \text{m}^{-3}$, $\rho_{Cu} = 1.68\times10^{-8}\ \Omega\cdot\text{m}$, $\alpha_{Cu} = 3.9\times10^{-3}\ /°\text{C}$
 
 > [!warning] Mistakes that cost points
+> - Using the resistor rules for capacitors. Capacitors **add in parallel** and use reciprocals in series.
+> - Dielectric problems: not asking first whether the battery is still connected ($V$ fixed) or not ($Q$ fixed).
 > - Diameter vs. radius in $A = \pi r^2$, and mm → m (mm² → m² is $10^{-6}$).
 > - Using $V = \varepsilon$ when current is flowing. With current, the terminal voltage is $\varepsilon - Ir$.
 > - Using the total voltage with one resistor's $R$ in $P = V^2/R$. The $V$ and $R$ have to belong to the same element.
@@ -262,7 +354,49 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $n_{Cu} =
 
 # Practice exam
 
-*Time yourself: 75 minutes. Calculator OK. Keep extra digits until the final step. Use the constants above.*
+*Time yourself: 90 minutes. Calculator OK. Keep extra digits until the final step. Use the constants above.*
+
+## Part A: Capacitance (Ch 8)
+
+**C1. Parallel plates (8.1, 8.3).** Two plates measuring 2.0 cm × 3.0 cm sit 1.0 mm apart in air, connected to a 12 V battery.
+- (a) Find $C$, $Q$, the field between the plates, and the stored energy.
+- 
+- (b) Find the energy density, and check that it times the gap's volume gives the same energy.
+- 
+- (c) The battery is **disconnected**, then the plates are pulled apart to 2.0 mm. Find the new $C$, $V$, $E$ and $U$. Where did the extra energy come from?
+- 
+- (d) Air breaks down at $3.0\times10^6$ V/m. What is the highest voltage the original 1.0 mm capacitor can hold?
+- 
+
+**C2. Derivation: coaxial capacitor (8.1).** A coaxial cable is 5.0 m long, with inner radius 0.50 mm and outer radius 2.0 mm (air between them).
+- (a) Derive $C = \dfrac{2\pi\varepsilon_0 L}{\ln(R_2/R_1)}$. Say what Gaussian surface you used.
+- 
+- (b) Evaluate it, and find the capacitance per meter. How much charge does it hold at 100 V?
+- 
+
+**C3. Capacitor network (8.2, 8.3).** $C_1 = 2.0$ µF and $C_2 = 6.0$ µF are in series, and that pair is in parallel with $C_3 = 4.0$ µF. The combination is connected to 12 V.
+- (a) Find $C_{eq}$ and the total charge drawn from the battery.
+- 
+- (b) Find the charge on and voltage across each capacitor.
+- 
+- (c) Find the total stored energy and the energy in $C_1$.
+- 
+
+**C4. Dielectric (8.4).** A 10 µF air capacitor is charged to 100 V. A slab with $\kappa = 3.0$ is then slid in to fill the gap.
+- (a) The battery **stays connected**. Find the new $C$, $Q$, $V$ and $U$.
+- 
+- (b) Start over, but **disconnect** the battery before inserting the slab. Find the new $C$, $Q$, $V$ and $U$, and the induced charge on the slab's surface.
+- 
+- (c) In (b), the energy went down. Where did it go?
+- 
+
+**C5. Charge sharing (8.2, 8.3).** A 4.0 µF capacitor is charged to 10 V, disconnected, then connected ($+$ to $+$) to an uncharged 6.0 µF capacitor.
+- (a) What is the final common voltage? (Which quantity is conserved?)
+- 
+- (b) Compare the stored energy before and after. Where did the difference go?
+- 
+
+## Part B: Current, resistance and DC circuits (Ch 9–10)
 
 **1. Drift velocity (9.2).** A copper wire has diameter 1.63 mm and carries a steady 2.00 A.
 - (a) Find the current density.
@@ -412,6 +546,31 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $n_{Cu} =
 
 # Answer key
 
+> [!success]- Problem C1
+> (a) $A = (0.020)(0.030) = 6.0\times10^{-4}\ \text{m}^2$. $C = \dfrac{\varepsilon_0A}{d} = \dfrac{(8.854\times10^{-12})(6.0\times10^{-4})}{1.0\times10^{-3}} =$ **5.3 pF**. $Q = CV = (5.31\times10^{-12})(12) =$ **64 pC**. $E = V/d = 12/0.0010 =$ **$1.2\times10^4$ V/m**. $U = \tfrac12CV^2 = \tfrac12(5.31\times10^{-12})(144) =$ **$3.8\times10^{-10}$ J**.
+> (b) $u_E = \tfrac12\varepsilon_0E^2 = \tfrac12(8.854\times10^{-12})(1.2\times10^4)^2 =$ **$6.4\times10^{-4}$ J/m³**. Volume $= Ad = 6.0\times10^{-7}$ m³, and $u_E \times Ad = 3.8\times10^{-10}$ J ✓.
+> (c) Disconnected, so **$Q$ stays fixed**. Doubling $d$ halves $C$: **2.7 pF**. $V = Q/C$ doubles: **24 V**. $E = \sigma/\varepsilon_0$ depends only on $Q/A$, so it stays **$1.2\times10^4$ V/m**. $U = Q^2/2C$ doubles: **$7.6\times10^{-10}$ J**. The extra $3.8\times10^{-10}$ J is the **work you did** pulling the plates apart, since opposite plates attract.
+> (d) $V_{max} = E_{max}d = (3.0\times10^6)(1.0\times10^{-3}) =$ **3000 V**.
+
+> [!success]- Problem C2
+> (a) Use a Gaussian **cylinder** of radius $r$ (between the conductors) and length $L$, coaxial with the cable. Only its curved side has flux: $E(2\pi rL) = Q/\varepsilon_0$, so $E = \dfrac{Q}{2\pi\varepsilon_0Lr}$. Integrate across the gap: $V = \displaystyle\int_{R_1}^{R_2}E\,dr = \dfrac{Q}{2\pi\varepsilon_0L}\ln\dfrac{R_2}{R_1}$. Then $C = Q/V = \dfrac{2\pi\varepsilon_0L}{\ln(R_2/R_1)}$.
+> (b) $C = \dfrac{2\pi(8.854\times10^{-12})(5.0)}{\ln 4} =$ **$2.0\times10^{-10}$ F** (201 pF), or **40 pF/m**. At 100 V: $Q = CV =$ **$2.0\times10^{-8}$ C** (20 nC).
+
+> [!success]- Problem C3
+> (a) Series pair: $C_{12} = \dfrac{(2)(6)}{2 + 6} = 1.5$ µF. Parallel with $C_3$: $C_{eq} = 1.5 + 4.0 =$ **5.5 µF**. $Q_{tot} = (5.5\ \mu\text{F})(12\ \text{V}) =$ **66 µC**.
+> (b) The series branch has 12 V across it and $C_{12} = 1.5$ µF, so it holds $Q = 18$ µC. Series capacitors share charge: **$Q_1 = Q_2 = 18$ µC**, $V_1 = 18/2.0 =$ **9.0 V**, $V_2 = 18/6.0 =$ **3.0 V** (they add to 12 ✓). $C_3$ has the full 12 V: **$Q_3 = 48$ µC**. Check: $18 + 48 = 66$ ✓.
+> (c) $U_{tot} = \tfrac12(5.5\times10^{-6})(12)^2 =$ **$4.0\times10^{-4}$ J**. $U_1 = \dfrac{Q_1^2}{2C_1} = \dfrac{(18\times10^{-6})^2}{2(2.0\times10^{-6})} =$ **$8.1\times10^{-5}$ J**. The smaller series capacitor takes the bigger share of the voltage and the energy.
+
+> [!success]- Problem C4
+> Before: $Q_0 = C_0V_0 = 1.0$ mC, $U_0 = \tfrac12C_0V_0^2 = 0.050$ J.
+> (a) **$V$ fixed** at 100 V. $C = 3.0 \times 10 =$ **30 µF**, $Q = CV =$ **3.0 mC** (the battery pushes on 2.0 mC more), $U = \tfrac12(30\times10^{-6})(100)^2 =$ **0.15 J** (up by $\kappa$).
+> (b) **$Q$ fixed** at 1.0 mC. $C =$ **30 µF**, $V = Q/C =$ **33 V**, $U = \dfrac{Q^2}{2C} = \dfrac{(1.0\times10^{-3})^2}{2(30\times10^{-6})} =$ **0.017 J** (down by $\kappa$). Induced charge: $Q_i = \left(1 - \tfrac13\right)(1.0\ \text{mC}) =$ **0.67 mC**.
+> (c) The fringing field **pulls the slab in**, so the field does work on the slab. If you let go, the slab speeds up. If you hold it back, the energy goes into your hand.
+
+> [!success]- Problem C5
+> (a) The wires conserve **charge**, not energy. $Q = (4.0\ \mu\text{F})(10\ \text{V}) = 40$ µC, now spread across $4.0 + 6.0 = 10$ µF in parallel: $V = 40/10 =$ **4.0 V**.
+> (b) Before: $\tfrac12(4.0\times10^{-6})(10)^2 = 2.0\times10^{-4}$ J. After: $\tfrac12(10\times10^{-6})(4.0)^2 = 8.0\times10^{-5}$ J. **$1.2\times10^{-4}$ J (60%) is lost**, burned as heat in the connecting wires' resistance (and a little radiated). How much is lost doesn't depend on that resistance, which is the same idea as the "half the battery's energy is burned" result in 10.5.
+
 > [!success]- Problem 1
 > $A = \pi r^2 = \pi(0.815\times10^{-3})^2 = 2.087\times10^{-6}\ \text{m}^2$.
 > (a) $J = I/A = 2.00/2.087\times10^{-6} \approx$ **$9.58\times10^{5}$ A/m²**.
@@ -495,6 +654,10 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $n_{Cu} =
 ---
 
 ## Checklist before the exam
+- [ ] Can I derive $C$ for parallel plates and a coaxial cylinder with Gauss's law?
+- [ ] Can I reduce a capacitor network and find each $Q$ and $V$?
+- [ ] Do I know $U = Q^2/2C = \tfrac12CV^2$, $u_E = \tfrac12\varepsilon_0E^2$, and which form to use?
+- [ ] For a dielectric, do I check first whether $Q$ or $V$ is fixed?
 - [ ] Can I derive $I = nqAv_d$ and $R = \rho L/A$ from scratch?
 - [ ] Can I set up a resistance integral for a non-uniform shape (coax, cone)?
 - [ ] Do I know when to use $I^2R$ vs. $V^2/R$, and that ratings fix $R = V^2/P$?

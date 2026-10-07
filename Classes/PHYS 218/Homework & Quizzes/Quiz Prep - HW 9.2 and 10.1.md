@@ -1,5 +1,5 @@
 # Quiz Prep: HW 9.2 and 10.1
-Class: [[PHYS 218]] · Covers current, resistivity, power (HW 9.2) and batteries, series/parallel (HW 10.1) · Full chapter review: [[Exam 2 Review - Ch 9 and 10]]
+Class: [[PHYS 218]] · Covers current, resistivity, power (HW 9.2) and batteries, series/parallel (HW 10.1) · Full chapter review: [[Exam 2 Review - Ch 8-10]] · Next: [[Quiz Prep - HW 10.2 and 10.3]]
 
 > [!abstract] The whole quiz in one sentence
 > A battery pushes charge around a loop. **Current** is how much flows, **resistance** is how hard the path fights it, and **power** is how fast energy gets burned. Every problem is one of those three ideas.
@@ -60,7 +60,7 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $c_{\text
 
 ## Practice quiz
 
-*Time yourself: 25 minutes. Calculator OK. Keep extra digits until the final step.*
+*Time yourself: 25 minutes. Calculator OK. Keep extra digits until the final step. The answer key is at the bottom.*
 
 **1. Wire (HW 9.2 style).** A round wire of diameter 2.0 mm has conductivity $5.0\times10^{7}\ \Omega^{-1}\text{m}^{-1}$ and carries an electric field of 0.040 V/m.
 - (a) How much current flows through it?
@@ -125,51 +125,6 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $c_{\text
 
 ---
 
-## Answer key
-
-> [!success]- Problem 1
-> $I = \sigma E A$.
-> (a) $A = \pi r^2 = \pi(1.0\times10^{-3})^2 = 3.14\times10^{-6}\ \text{m}^2$, so $I = (5.0\times10^7)(0.040)(3.14\times10^{-6}) \approx$ **6.28 A**.
-> (b) $A = s^2 = 4.0\times10^{-6}\ \text{m}^2$, so $I = (5.0\times10^7)(0.040)(4.0\times10^{-6}) =$ **8.0 A**. The square has more area, so it carries more current.
-
-> [!success]- Problem 2
-> (a) $W = eV = (1.602\times10^{-19})(450) \approx$ **$7.21\times10^{-17}$ J**.
-> (b) $v = \sqrt{2W/m} = \sqrt{2(7.209\times10^{-17})/(9.11\times10^{-31})} \approx$ **$1.26\times10^{7}$ m/s**.
-
-> [!success]- Problem 3
-> (a) $I = P/V = 1500/120 =$ **12.5 A**.
-> (b) $R = V^2/P = 120^2/1500 =$ **9.6 Ω**. This also equals $V/I = 120/12.5$.
-> (c) $E = Pt = 1500 \times 600 = 9.0\times10^5$ J, so $\Delta T = E/(mc) = 9.0\times10^5/(5.0 \times 4186) \approx$ **43 °C**.
-
-> [!success]- Problem 4
-> Use $V = \varepsilon - Ir$ twice: $11.4 = \varepsilon - 3r$ and $11.0 = \varepsilon - 5r$.
-> (a) Subtract: $0.4 = 2r$, so **$r = 0.20\ \Omega$**.
-> (b) $\varepsilon = 11.4 + 3(0.20) =$ **12.0 V**. Check with the other equation: $11.0 + 5(0.20) = 12.0$. ✓
-> (c) To the circuit: $IV = 5.0 \times 11.0 =$ **55 W**. Wasted: $I^2 r = 25 \times 0.20 =$ **5.0 W**. Total $= I\varepsilon = 60$ W. ✓
-
-> [!success]- Problem 5
-> (a) $R_{23} = (1/30 + 1/60)^{-1} = 20\ \Omega$, so $R_{eq} = 20 + 20 =$ **40 Ω**.
-> (b) $I = 12/40 =$ **0.30 A**.
-> (c) $V_{23} = 12 - (0.30)(20) =$ **6.0 V**.
-> (d) $I_2 = 6/30 =$ **0.20 A** and $I_3 = 6/60 =$ **0.10 A**. They add to 0.30 A. ✓
-
-> [!success]- Problem 6
-> Branch 2-3 is $20 + 30 = 50\ \Omega$ in series. In parallel with $R_4 = 50\ \Omega$ gives $25\ \Omega$. Then $R_{eq} = 10 + 25 = 35\ \Omega$.
-> (a) $I = 14/35 =$ **0.40 A**.
-> (b) The voltage across the combination is $14 - (0.40)(10) = 10$ V. The 2-3 branch has $10/50 = 0.20$ A, and the same current flows through $R_2$: **0.20 A**.
-> (c) $P_4 = V^2/R = 10^2/50 =$ **2.0 W**.
-
-> [!success]- Problem 7
-> (a) All in series: $10 + 20 + 40 =$ **70 Ω**.
-> (b) All in parallel: $(1/10 + 1/20 + 1/40)^{-1} \approx$ **5.71 Ω**, which is smaller than the smallest resistor. ✓
-
-> [!success]- Problem 8
-> (a) The battery has internal resistance $r$. More current means a bigger voltage drop $Ir$ inside it, so less voltage is left at the terminals: $V = \varepsilon - Ir$.
-> (b) Parallel branches give charge more paths to flow through, so the total current for a given voltage goes up, which means the total resistance goes down.
-> (c) The **larger** resistor. In series the current is the same, and $V = IR$, so the bigger $R$ gets the bigger share of the voltage.
-
----
-
 ## Checklist before the quiz
 - [x] Can I tell series from parallel just by looking at the circuit?
 - [x] Do I know what stays the same in each (series: $I$, parallel: $V$)?
@@ -177,3 +132,48 @@ Constants: $e = 1.602\times10^{-19}$ C, $m_e = 9.11\times10^{-31}$ kg, $c_{\text
 - [x] Do I know $V = \varepsilon - Ir$ and which sign goes where?
 - [x] Can I pick the right power formula from what's given?
 - [x] Am I converting mm to m, and keeping the unrounded values until the end?
+
+---
+
+## Answer key
+
+**Problem 1**  
+$I = \sigma E A$.  
+(a) $A = \pi r^2 = \pi(1.0\times10^{-3})^2 = 3.14\times10^{-6}\ \text{m}^2$, so $I = (5.0\times10^7)(0.040)(3.14\times10^{-6}) \approx$ **6.28 A**.  
+(b) $A = s^2 = 4.0\times10^{-6}\ \text{m}^2$, so $I = (5.0\times10^7)(0.040)(4.0\times10^{-6}) =$ **8.0 A**. The square has more area, so it carries more current.  
+
+**Problem 2**  
+(a) $W = eV = (1.602\times10^{-19})(450) \approx$ **$7.21\times10^{-17}$ J**.  
+(b) $v = \sqrt{2W/m} = \sqrt{2(7.209\times10^{-17})/(9.11\times10^{-31})} \approx$ **$1.26\times10^{7}$ m/s**.  
+
+**Problem 3**  
+(a) $I = P/V = 1500/120 =$ **12.5 A**.  
+(b) $R = V^2/P = 120^2/1500 =$ **9.6 Ω**. This also equals $V/I = 120/12.5$.  
+(c) $E = Pt = 1500 \times 600 = 9.0\times10^5$ J, so $\Delta T = E/(mc) = 9.0\times10^5/(5.0 \times 4186) \approx$ **43 °C**.  
+
+**Problem 4**  
+Use $V = \varepsilon - Ir$ twice: $11.4 = \varepsilon - 3r$ and $11.0 = \varepsilon - 5r$.  
+(a) Subtract: $0.4 = 2r$, so **$r = 0.20\ \Omega$**.  
+(b) $\varepsilon = 11.4 + 3(0.20) =$ **12.0 V**. Check with the other equation: $11.0 + 5(0.20) = 12.0$. ✓  
+(c) To the circuit: $IV = 5.0 \times 11.0 =$ **55 W**. Wasted: $I^2 r = 25 \times 0.20 =$ **5.0 W**. Total $= I\varepsilon = 60$ W. ✓  
+
+**Problem 5**  
+(a) $R_{23} = (1/30 + 1/60)^{-1} = 20\ \Omega$, so $R_{eq} = 20 + 20 =$ **40 Ω**.  
+(b) $I = 12/40 =$ **0.30 A**.  
+(c) $V_{23} = 12 - (0.30)(20) =$ **6.0 V**.  
+(d) $I_2 = 6/30 =$ **0.20 A** and $I_3 = 6/60 =$ **0.10 A**. They add to 0.30 A. ✓  
+
+**Problem 6**  
+Branch 2-3 is $20 + 30 = 50\ \Omega$ in series. In parallel with $R_4 = 50\ \Omega$ gives $25\ \Omega$. Then $R_{eq} = 10 + 25 = 35\ \Omega$.  
+(a) $I = 14/35 =$ **0.40 A**.  
+(b) The voltage across the combination is $14 - (0.40)(10) = 10$ V. The 2-3 branch has $10/50 = 0.20$ A, and the same current flows through $R_2$: **0.20 A**.  
+(c) $P_4 = V^2/R = 10^2/50 =$ **2.0 W**.  
+
+**Problem 7**  
+(a) All in series: $10 + 20 + 40 =$ **70 Ω**.  
+(b) All in parallel: $(1/10 + 1/20 + 1/40)^{-1} \approx$ **5.71 Ω**, which is smaller than the smallest resistor. ✓  
+
+**Problem 8**  
+(a) The battery has internal resistance $r$. More current means a bigger voltage drop $Ir$ inside it, so less voltage is left at the terminals: $V = \varepsilon - Ir$.  
+(b) Parallel branches give charge more paths to flow through, so the total current for a given voltage goes up, which means the total resistance goes down.  
+(c) The **larger** resistor. In series the current is the same, and $V = IR$, so the bigger $R$ gets the bigger share of the voltage.

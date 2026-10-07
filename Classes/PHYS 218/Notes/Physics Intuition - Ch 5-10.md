@@ -1,5 +1,5 @@
 # Physics Intuition: Ch 5–10
-Class: [[PHYS 218]] · Formulas and practice: [[Exam 2 Review - Ch 9 and 10]] · [[Exam 1 - Corrections]] · Flashcards: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+Class: [[PHYS 218]] · Formulas and practice: [[Exam 2 Review - Ch 8-10]] · [[Exam 1 - Corrections]] · Flashcards: [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
 > [!abstract] What this is
 > This isn't a formula sheet. It's the mental pictures behind the formulas: *why* things work the way they do, so you can predict an answer before you calculate it and notice when a calculation comes out wrong. Read it like a short paper, one chapter at a time. Each chapter ends with **predict-then-check** questions: answer them in your head first, then open the box.

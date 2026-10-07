@@ -63,3 +63,4 @@ N#N.O=O>>[N]=O.[N]=O
 **d.** What are the equilibrium concentrations of all three components after equilibrium is established?
 
 **Answer:** ${}\begin{bmatrix}R & N_{2} & O_{2} & NO \\  I & 0.5 & 0.5 & 0.5 \\  C & +x & +x & -2x \\  E & 0.5+x & 0.5+x & 0.5-2x\end{bmatrix}\implies \frac{(0.5-2x)^2}{(0.5+x)^2}=K=4.0\times 10^{-4}\implies \sqrt{ 4\times 10^{-4} }=\frac{0.5-2x}{0.5+x}\implies x=0.243\implies [N_{2}]=[O_{2}]=0.743M, \text{ } [NO]=0.0149M{}$
+

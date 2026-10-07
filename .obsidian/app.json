@@ -3,9 +3,6 @@
   "showLineNumber": false,
   "attachmentFolderPath": "attachments",
   "newFileLocation": "current",
-  "userIgnoreFilters": [
-    "__pycache__/",
-    "Archive/"
-  ],
+  "userIgnoreFilters": [],
   "alwaysUpdateLinks": true
 }

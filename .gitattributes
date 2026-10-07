@@ -1,4 +1,3 @@
 # Keep GitHub's language bar about the code that matters (the Julia tools).
-# Third-party Obsidian plugins and archived old code are not counted.
+# Third-party Obsidian plugins are not counted.
 .obsidian/** linguist-vendored
-Archive/** linguist-vendored

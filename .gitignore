@@ -4,10 +4,6 @@
 .obsidian/cache
 .trash/
 
-# Python caches from the Eigen Calculator
-__pycache__/
-*.pyc
-
 # OS junk
 .DS_Store
 Thumbs.db
