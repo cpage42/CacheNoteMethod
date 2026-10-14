@@ -1,5 +1,7 @@
-# Exam 2 Review: Ch 8–10 (Capacitance, Current, Resistance, DC Circuits)
-Class: [[PHYS 218]] · Exam 2 is **Tue Oct 13** and covers *University Physics Vol. 2* Ch 8 (8.1–8.5), Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Ch 08 - Capacitance]] · [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] · [[RC circuits]] · [[Physics Intuition - Ch 5-10]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
+q# Exam 2 Review: Ch 8–10 (Capacitance, Current, Resistance, DC Circuits)
+
+Also: [[Exam 2 Past Exams - Worked Key]] (real F18/S18 Exam 2s with worked solutions)
+Class: [[PHYS 218]] · Exam 2 is **Tue Oct 13** and covers *University Physics Vol. 2* Ch 8 (8.1–8.5), Ch 9 (9.1–9.6) and Ch 10 (10.1–10.6) · Related: [[Exam 2 Sample Exam]] · [[Ch 08 - Capacitance]] · [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] · [[RC circuits]] · [[Physics Intuition - Ch 5-10]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]]
 
 > [!abstract] All three chapters in one paragraph
 > A **capacitor** is two conductors holding $\pm Q$. Its capacitance $C = Q/V$ depends only on geometry, it stores energy $\tfrac12CV^2$ in its field, and a dielectric multiplies $C$ by $\kappa$. An electric field inside a wire pushes free charges along slowly (the **drift velocity**), and the rate charge passes a point is the **current**. How hard a material fights that flow is its **resistivity**, and a shaped piece of it has a **resistance** $R = \rho L/A$. For ohmic materials $V = IR$. Pushing current through resistance burns energy at $P = IV$. A **battery** is an emf $\varepsilon$ with a small internal resistance $r$. Wire batteries and resistors into a network and two conservation laws solve everything: charge is conserved at junctions (**KCL**) and energy is conserved around loops (**KVL**). Add a capacitor and the circuit gets a clock, $\tau = RC$.

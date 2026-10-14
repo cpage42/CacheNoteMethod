@@ -7,6 +7,7 @@ Covers all of Ch 9 (current and resistance) and Ch 10 (DC circuits). Study: Ctrl
 Definition of current::$I = \frac{dQ}{dt}$ (charge per second, A = C/s)
 Charge from current::$Q = \int I\,dt$ ($= It$ for constant current); number of electrons $N = Q/e$
 Direction of conventional current::the way positive charge would move: out of the battery's $+$ terminal, through the circuit, into $-$. Electrons in a metal go the other way.
+<!--SR:!2026-10-10,0,230-->
 Current from drift velocity::$I = nqAv_{d}$ ($n$ = carriers per m³)
 Derive $I = nqAv_{d}$::in time $dt$ the carriers in a cylinder of length $v_{d}\,dt$ pass the end: $dQ = n(Av_{d}\,dt)q$, divide by $dt$
 Current density and drift velocity::$\vec J = nq\vec v_{d}$
@@ -67,6 +68,7 @@ Terminal voltage while charging a battery::$V = \varepsilon + Ir$
 Terminal voltage with no current::$V = \varepsilon$ (the maximum; $V < \varepsilon$ whenever current flows)
 Short-circuit current of a battery::$I = \varepsilon/r$
 Finding $\varepsilon$ and $r$ from two readings::write $V = \varepsilon - Ir$ twice and subtract: $r = \frac{V_{1}-V_{2}}{I_{2}-I_{1}}$, then $\varepsilon = V_{1} + I_{1}r$
+<!--SR:!2026-10-10,0,230-->
 Power a battery produces (total)::$P = I\varepsilon$
 Power a battery delivers to the circuit::$P = IV$ (use the terminal voltage)
 Power wasted inside a battery::$P = I^{2}r = I\varepsilon - IV$

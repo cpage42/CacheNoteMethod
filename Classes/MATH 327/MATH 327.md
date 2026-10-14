@@ -31,6 +31,7 @@ canvas: https://courses.fortlewis.edu/courses/36144
 1. [[Intro to Systems of DEs]] (W6 Mon)
 2. [[Phase Planes and Eigenvectors]] (W6 Wed)
 3. [[Complex Eigenvalues]] (W7 Mon)
+4. [[Nonhomogeneous Systems]] (Lebl 3.9, first-order methods)
 
 Tools: [[Eigen Calculator & DEch]] · Scratch: [[Phase planes scratch]] · Flashcards: [[Flashcards - MATH 327]]
 

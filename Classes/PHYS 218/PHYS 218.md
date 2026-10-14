@@ -45,10 +45,17 @@ One page per textbook chapter: the main ideas section by section, boxed formulas
 | | |
 |---|---|
 | **Exam review** | [[Exam 2 Review - Ch 8-10]] (Exam 2, Tue 10/13: Ch 8–10, derivations + practice exam) |
+| **Equation sheet** | [[Exam 2 Equation Sheet]] (official sheet + what's NOT on it) |
+| **Sample exam** | [[Exam 2 Sample Exam]] (4 problems, 50 min, worked key) |
+| **Past exams** | [[Exam 2 Past Exams - Worked Key]] (F18 + S18 real Exam 2s, 10 problems, fully worked) |
+| **Practice exam B** | [[Exam 2 Practice Exam B]] (5 problems in old-exam style + RC, 50 min, worked key) |
+| **Practice exam D** | [[Exam 2 Practice Exam D]] (**start here**: Exam 1 difficulty, 4 problems, 90 min, worked key) |
+| **Practice exam C** | [[Exam 2 Practice Exam C (Symbolic)]] (stretch: harder than the real exam, all variables, worked key) |
 | **Exam corrections** | [[Exam 1 - Corrections]] (Ch 5–8) |
 | **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] |
+| **Homework walkthroughs** | [[HW 10.4 and 10.5 Walkthrough]] (meters and RC circuits, every step explained) |
 | **Big picture** | [[Physics Intuition - Ch 5-10]] (the mental pictures behind Ch 5–10, with predict-then-check questions) |
-| **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] |
+| **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · [[Lecture - Cyclotrons, Force on Currents, Torque]] (Ch 11 lecture transcript) |
 | **Flashcards** | [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] · [[Flashcards - PHYS 218 Magnetism (Ch 11-16)]] |
 | **Textbook** | [UPV2 PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Textbook/UPV2.pdf>): Ch 5 charges & fields · 6 Gauss · 7 potential · 8 capacitance · 9 current & resistance · 10 DC circuits · 11–13 magnetism next |
 

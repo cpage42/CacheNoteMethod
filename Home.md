@@ -47,6 +47,12 @@ Fall 2026 · Fort Lewis College
 - [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]]: PHYS 218 practice quizzes with answer keys
 - [[Eigen Calculator & DEch]]: eigenvalues, general solutions and a DE solution checker (MATH 327)
 
+## Tutoring
+- Lia (AP Precalc): [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+
+## Observatory
+- [[Telescope Operation]]: draft procedure from the first walkthrough (gaps marked ❓)
+
 ## Guides
 - [[START HERE - Shortcuts]]: Latex Suite math shortcuts, plus practice challenges
 - [[Plugin Guide]]: Desmos, TikZ circuits, flashcards, Dataview, templates
@@ -54,5 +60,7 @@ Fall 2026 · Fort Lewis College
 ## Vault layout
 - **Classes:** one folder per class. Each has a hub note that auto-lists everything for that class, plus subfolders such as `Chapter Notes`, `Notes`, `Lectures`, `Worksheets`, `Homework & Quizzes`, `Exams`, `Flashcards` and `Tools`
 - **Guides:** how-tos for this vault
+- **Lia:** tutoring notes (AP Precalc)
+- **Observatory:** telescope procedures
 - **Templates:** Class Note template
 - **attachments:** images, sorted by class (new pasted images land here automatically)
