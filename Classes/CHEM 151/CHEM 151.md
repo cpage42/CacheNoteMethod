@@ -20,13 +20,13 @@ canvas: https://courses.fortlewis.edu/courses/35753
 **Rules:** No exam retakes; a missed exam is replaced by your final exam grade. Phones collected on exam/quiz days. 3+ zeros in lab = fail the course.
 **Calculator:** Only the **TI-30XIIS** is allowed on quizzes/exams.
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
-> - **Tue 10/6 11:59 PM: Problem Set 6 (Equilibrium and thermo, Q vs K)** · the QvK Worksheet was due 9:30 AM today and isn't marked submitted in Canvas
-> - Thu 10/8 9:35 AM: Module 2 Quiz 2
-> - Covered: Kc, ICE tables, small-x, Q vs K, Le Chatelier, ΔG and K · Next: acids & bases, pH, pKa/pKb
+> [!todo] Upcoming (Canvas snapshot, updated Oct 14)
+> - **Thu 10/15 9:35 AM: EXAM 2** → [[Exam 2 Review - Equilibrium]]
+> - (Problem sets left off on purpose)
 
 ## Study
-- Notes: [[Equilibrium and Thermo]]
+- Exam review: [[Exam 2 Review - Equilibrium]] · [[Exam 2 Practice Exam (Canvas)]] · [[Exam 2 Practice Exam - Walkthrough]]
+- Notes: [[Equilibrium and Thermo]] · [[Delta G and K with Favorability]]
 - Worksheets: [[Q vs K Worksheet]]
 - Flashcards: [[Flashcards - CHEM 151]] (`chem` deck)
 

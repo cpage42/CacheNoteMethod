@@ -48,7 +48,7 @@ Fall 2026 · Fort Lewis College
 - [[Eigen Calculator & DEch]]: eigenvalues, general solutions and a DE solution checker (MATH 327)
 
 ## Tutoring
-- Lia (AP Precalc): [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+- [[Lia]] (AP Precalc): Unit 1 refresher (notes 1–4) · test prep (5 - Test Review 1.1-1.6, 6 - Test Review 5.1-5.3, 7 - In-Person Worksheet) · printable PDFs
 
 ## Observatory
 - [[Telescope Operation]]: draft procedure from the first walkthrough (gaps marked ❓)

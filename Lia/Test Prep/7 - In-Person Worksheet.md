@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # In-Person Worksheet: 1.1–1.6 and 5.1–5.3
-Tutoring: Lia · Reviews: [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]] · Printable: `PDFs/Lia - In-Person Worksheet.pdf`
+Tutoring: [[Lia]] · Reviews: [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]] · Printable: `PDFs/Lia - In-Person Worksheet.pdf`
 
 *One **E**asy and one **H**ard problem per section. Do the easy one first; if she gets it, move to the hard one. The answer key is at the bottom.*
 

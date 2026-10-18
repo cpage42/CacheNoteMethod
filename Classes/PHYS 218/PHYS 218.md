@@ -23,13 +23,14 @@ canvas: https://courses.fortlewis.edu/courses/36393
 **Homework:** Expert TA (via Canvas) · due 10 PM · 4 free submissions per part · late work = 50% credit
 **Resources:** Syllabus & course schedule (Canvas → Syllabus; schedule updated Sep 27) · Lecture slides by chapter (Canvas → Pages → Lectures by chapter)
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
-> - **Wed 10/7: Quiz 10 (HW 10.2/10.3)** → [[Quiz Prep - HW 10.2 and 10.3]] · 10 PM: HW 10.5
-> - **Fri 10/9: Quiz 11 (HW 10.4/10.5)** → [[Quiz Prep - HW 10.4 and 10.5]] · 10 PM: HW 11.1 · Exam 2 review in class
-> - Mon 10/12: no class (Indigenous Peoples' Day)
-> - **Tue 10/13: EXAM 2, Ch 8–10** → [[Exam 2 Review - Ch 8-10]]
-> - Wed 10/14: HW 11.2 · Fri 10/16: HW 11.3, Quiz 12 (HW 11.1/11.2)
-> - Exam 3 (Ch 11–13): Tue 11/3
+> [!todo] Upcoming (Canvas snapshot, updated Oct 14)
+> - Thu 10/15 10 PM: HW 11.2
+> - **Fri 10/16:** Quiz 12 (HW 11.1/11.2) · 10 PM: HW 11.3
+> - Mon 10/19 10 PM: HW 11.4
+> - Wed 10/21 10 PM: HW 12.1
+> - Fri 10/23 10 PM: HW 12.2
+> - **Tue 11/3: EXAM 3, Ch 11–13** → notes: [[Lecture - Cyclotrons, Force on Currents, Torque]], [[Ch 11 - Magnetic Forces and Fields]]
+> - Quiz dates after 10/16 aren't on Canvas yet; check the syllabus schedule
 
 ## Chapter notes
 One page per textbook chapter: the main ideas section by section, boxed formulas, a formula sheet and common mistakes.
@@ -44,18 +45,13 @@ One page per textbook chapter: the main ideas section by section, boxed formulas
 ## Study
 | | |
 |---|---|
-| **Exam review** | [[Exam 2 Review - Ch 8-10]] (Exam 2, Tue 10/13: Ch 8–10, derivations + practice exam) |
-| **Equation sheet** | [[Exam 2 Equation Sheet]] (official sheet + what's NOT on it) |
-| **Sample exam** | [[Exam 2 Sample Exam]] (4 problems, 50 min, worked key) |
-| **Past exams** | [[Exam 2 Past Exams - Worked Key]] (F18 + S18 real Exam 2s, 10 problems, fully worked) |
-| **Practice exam B** | [[Exam 2 Practice Exam B]] (5 problems in old-exam style + RC, 50 min, worked key) |
-| **Practice exam D** | [[Exam 2 Practice Exam D]] (**start here**: Exam 1 difficulty, 4 problems, 90 min, worked key) |
-| **Practice exam C** | [[Exam 2 Practice Exam C (Symbolic)]] (stretch: harder than the real exam, all variables, worked key) |
+| **Exam 2 (done 10/13)** | Archived in Exams/Exam 2: [[Exam 2 Review - Ch 8-10]] · [[Exam 2 Equation Sheet]] · [[Exam 2 Sample Exam]] · [[Exam 2 Past Exams - Worked Key]] · [[Exam 2 Practice Exam B]] · [[Exam 2 Practice Exam C (Symbolic)]] · [[Exam 2 Practice Exam D]] |
+| **Exam 3 (Tue 11/3, Ch 11–13)** | *prep notes go here* |
 | **Exam corrections** | [[Exam 1 - Corrections]] (Ch 5–8) |
 | **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] |
 | **Homework walkthroughs** | [[HW 10.4 and 10.5 Walkthrough]] (meters and RC circuits, every step explained) |
 | **Big picture** | [[Physics Intuition - Ch 5-10]] (the mental pictures behind Ch 5–10, with predict-then-check questions) |
-| **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · [[Lecture - Cyclotrons, Force on Currents, Torque]] (Ch 11 lecture transcript) |
+| **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · [[Lecture - Cyclotrons, Force on Currents, Torque]] (Ch 11 lecture transcript) · [[11.2 Equation Sheet]] · [[Ch 11 + 12.1 Equation Sheet]] |
 | **Flashcards** | [[Flashcards - PHYS 218 Electrostatics (Ch 5-8)]] · [[Flashcards - PHYS 218 Circuits (Ch 9-10)]] · [[Flashcards - PHYS 218 Magnetism (Ch 11-16)]] |
 | **Textbook** | [UPV2 PDF](<file:///C:/Users/Cache/Documents/School/Fall 2026/PHYS 218/Textbook/UPV2.pdf>): Ch 5 charges & fields · 6 Gauss · 7 potential · 8 capacitance · 9 current & resistance · 10 DC circuits · 11–13 magnetism next |
 

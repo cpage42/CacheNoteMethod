@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # AP Precalculus Refresher: Unit 1
-Tutoring: Lia · Next: [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+Tutoring: [[Lia]] · Next: [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
 
 > [!info] The course
 > AP Precalculus has 4 units. Units 1–3 are on the AP exam; Unit 4 is not.

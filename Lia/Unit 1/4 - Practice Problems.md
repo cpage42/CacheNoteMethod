@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # Practice Problems: AP Precalc Unit 1
-Tutoring: Lia · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+Tutoring: [[Lia]] · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
 
 *Each section opens with warm-ups (W1, W2, …) for confidence and basics, then the main problems go roughly easiest to hardest. ★ = harder or AP-style. Calculator OK where noted. The answer key is at the bottom.*
 

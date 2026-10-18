@@ -22,16 +22,21 @@ canvas: https://courses.fortlewis.edu/courses/36144
 **Policies:** 3 free absences. No make-up exams unless documented emergency. Devices/AI forbidden on exams.
 **Tools:** WebWork (via Canvas) · Insight Maker · Julia DE Checker & Eigen Calculator (Canvas → Technology Links) · [Class notes site](https://pub.pretext.plus/o/c37e31ca-1114-4043-aa68-257a6695ed9c/website/ho-syllabus-fall-26.html)
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
-> - Wed 10/7 11:59 PM: WebWork *Systems Complex Eigens*
-> - Tue 10/13 11:59 PM: *Worksheet 6*
-> - Fri 10/16 · Tue 10/20 · Fri 10/23: WebWork *Repeated Eigens* · *Non Homogeneous* · *Second Order*
+> [!todo] Upcoming (Canvas snapshot, updated Oct 14)
+> - Fri 10/16 11:59 PM: Systems Repeated Eigens
+> - Tue 10/20 11:59 PM: Systems Non Homogeneous → [[Nonhomogeneous Systems]]
+> - Wed 10/21 11:59 PM: Worksheet 7
+> - Fri 10/23 11:59 PM: Second Order
+> - Tue 10/27 11:59 PM: Worksheet 8 · Harmonic Oscillator
+> - Wed 10/28 11:59 PM: Forced Oscillator
+> - Tue 11/3 11:59 PM: Coupled Oscillators
 
 ## Lectures (in order)
 1. [[Intro to Systems of DEs]] (W6 Mon)
 2. [[Phase Planes and Eigenvectors]] (W6 Wed)
 3. [[Complex Eigenvalues]] (W7 Mon)
-4. [[Nonhomogeneous Systems]] (Lebl 3.9, first-order methods)
+4. [[Complex Eigenvalues Continued]]
+5. [[Nonhomogeneous Systems]] (Lebl 3.9, first-order methods)
 
 Tools: [[Eigen Calculator & DEch]] · Scratch: [[Phase planes scratch]] · Flashcards: [[Flashcards - MATH 327]]
 

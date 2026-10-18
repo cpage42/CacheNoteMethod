@@ -34,10 +34,14 @@ canvas: https://courses.fortlewis.edu/courses/35744
 | 15 | 11/30 | **Final lab practical exam** |
 | 16 | 12/7 | Make-up practical (if needed), 2:15–3:45 PM |
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
-> - Wed 10/7 11:59 PM: Equilibrium Constant lab notebook upload
-> - No lab next week (Mon 10/12)
-> - **Mon 10/19 1:25 PM: Mid-Term Lab Practical**
+> [!todo] Upcoming (Canvas snapshot, updated Oct 14)
+> - **Mon 10/19 1:25 PM: Mid-Term Lab Practical Exam**
+> - Mon 10/26 1:25 PM: Week 10 Lab Preparation
+> - Wed 10/28 11:59 PM: Acid-Base Chemistry lab notebook upload
+> - Mon 11/2 1:25 PM: Week 11 Lab Preparation
+> - Wed 11/4 11:59 PM: Electrochemistry lab notebook upload
+> - Mon 11/9: Week 12 Lab Prep · Wed 11/11: Kinetics Part I notebook
+> - Mon 11/16: Week 13 Lab Prep · Wed 11/18: Kinetics Part II notebook
 
 ## Notes
 ```dataview

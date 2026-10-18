@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # Test Review: AP Precalc 1.1–1.6
-Tutoring: Lia · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[6 - Test Review 5.1-5.3]]
+Tutoring: [[Lia]] · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[6 - Test Review 5.1-5.3]]
 
 *For her make-up test. Section-by-section review with one worked example each, then a practice test (about 45 minutes) with the answer key at the bottom.*
 

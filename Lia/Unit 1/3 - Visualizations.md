@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # Visualizations: AP Precalc Unit 1
-Tutoring: Lia · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+Tutoring: [[Lia]] · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
 
 # Unit 1: Polynomial and rational functions
 

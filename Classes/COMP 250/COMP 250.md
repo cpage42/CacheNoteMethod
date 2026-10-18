@@ -19,10 +19,11 @@ canvas: https://courses.fortlewis.edu/courses/36803
 **Grading (~1100 pts):** Discussion/low-stakes ~250 · Essay 1 Group PSA 250 · Essay 2 Genre Analysis 250 · Essay 3 Researched Genre Production 300 · Final Presentation 50. You must complete all major essays to pass.
 **Style:** MLA or APA; pick one and stick with it ([Purdue OWL](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html)).
 
-> [!todo] Upcoming (Canvas snapshot, updated Oct 6)
-> - Tue 10/6 11:59 PM: In-class group discussion board (Practice Genre Analysis)
-> - **Thu 10/8 11:59 PM: Q&R 4 / Essay 2 proposal memo and genre overview**
-> - Fri 10/9 11:59 PM: PSA Showcase evaluation
+> [!todo] Upcoming (Canvas snapshot, updated Oct 14)
+> - **Overdue:** In-Class Group Discussion Board: Practice Genre Analysis (was due 10/6)
+> - **Thu 10/22 11:59 PM: Essay 2 rough draft** to the Working Drafts thread → [[Genre Analysis Matrix]] · [[Apology Video Sources]]
+> - **Tue 10/27 (by class):** upload full Essay 2 draft for peer review
+> - Fri 10/30 11:59 PM: return peer feedback
 
 ## Notes
 ```dataview

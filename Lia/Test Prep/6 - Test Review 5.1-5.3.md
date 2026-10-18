@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # Test Review: 5.1–5.3 (Composition, Inverses, Exponential Functions)
-Tutoring: Lia · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]]
+Tutoring: [[Lia]] · [[1 - Unit 1 Refresher]] · [[2 - Key Points to Cover]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]]
 
 > [!info] Section numbers
 > These are textbook section numbers, not AP's. 5.1 = composite functions, 5.2 = one-to-one functions and inverses, 5.3 = exponential functions (the usual textbook order). In AP numbering this is 2.3–2.5 and 2.7–2.8. If her book splits it differently, adjust.

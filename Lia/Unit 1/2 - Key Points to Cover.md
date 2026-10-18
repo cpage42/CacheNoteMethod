@@ -2,7 +2,7 @@
 tags: [tutoring, ap-precalc]
 ---
 # Key Points to Cover: AP Precalc Unit 1
-Tutoring: Lia · [[1 - Unit 1 Refresher]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
+Tutoring: [[Lia]] · [[1 - Unit 1 Refresher]] · [[3 - Visualizations]] · [[4 - Practice Problems]] · [[5 - Test Review 1.1-1.6]] · [[6 - Test Review 5.1-5.3]]
 
 > [!tip] First 5 minutes
 > - Ask what she's doing in class right now, and for a recent quiz or homework. Mistakes show where the gaps are faster than anything else.
