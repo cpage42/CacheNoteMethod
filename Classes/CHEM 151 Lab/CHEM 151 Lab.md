@@ -50,3 +50,42 @@ LIST FROM [[]] WHERE file.name != "Home" SORT file.ctime ASC
 
 > [!tip] Adding a note
 > Put new notes for this class in this folder and add a link back here: `Class: [[CHEM 151 Lab]]`. Links are what connect the dots in graph view.
+
+## Lab manuals
+PDFs from Canvas, stored in `Lab Manuals/`.
+
+- [[Making Solutions and Dilutions Lab Manual (Fall).pdf]] (older version: [[Making Solutions and Dilutions Lab Manual.pdf]])
+- [[Measuring an Equilibrium Constant Lab Manual.pdf]]
+- [[Acid-Base Chemistry Lab Manual.pdf]]
+- [[Electrons on the Move - Some Electrochemistry Lab Manual.pdf]]
+- [[Thermochemistry Calorimetry Lab Manual.pdf]]
+- [[Intermolecular Forces Lab Manual.pdf]]
+- [[Colligative Properties - Freezing Point Depression Lab Manual.pdf]]
+- [[Kinetics of H2O2 Decomposition Part 1 Lab Manual.pdf]]
+- [[Kinetics of H2O2 Decomposition Part 2 Lab Manual.pdf]]
+- [[Le Chatelier's Principle Manual.pdf]]
+
+## Pre-lab talks
+Slide decks from Canvas, stored in `Prelab Talks/`. Each matches the lab manual of the same name above.
+
+- [[Prelab talk_Safety and Calorimetry.pdf]]
+- [[Prelab talk_Making Solutions (Fall).pdf]]
+- [[Prelab talk_Equilibrium Constant (Fall).pdf]]
+- [[Prelab talk_Acid-Base.pdf]]
+- [[Prelab talk_Electrochem.pdf]]
+- [[Pre-lab talk_Intermolecular Forces.pdf]]
+- [[Prelab talk_Colligative Properties.pdf]]
+- [[Prelab talk_Kinetics Part 1.pdf]]
+- [[Prelab talk_Kinetics Part 2.pdf]]
+- [[Prelab talk_Le Chatelier.pdf]]
+- [[Prelab talk_Vitamin C.pdf]]
+- [[Prelab talk_Equilibrium Constant.pdf]] (older version)
+
+## Completed pre-labs
+- [[CHEM 151 Lab - Completed Pre-Labs]] (Acid-Base, Kinetics I, Le Chatelier, IMF) — PDF: [[CHEM 151 Lab - Completed Pre-Labs.pdf]]
+
+## Lab journals
+- [[Lab Journals]] (transcribed notebook uploads: Calorimetry, IMF, Colligative, Le Chatelier, Making Solutions, Equilibrium Constant)
+
+## Manual summaries
+Each has a short what-you-do / goal blurb above the embedded PDF, in Lab Manuals/ (files named "... - Manual Summary").

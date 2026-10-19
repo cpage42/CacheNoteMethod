@@ -198,3 +198,15 @@ $$
  & \frac{F}{B}=LI\sin\theta
 \end{align}
 $$
+---
+---
+$$
+\begin{aligned}
+A &= \begin{bmatrix}-\frac{1}{3} & \frac{1}{12}\\\frac{1}{3} & -\frac{1}{3}\end{bmatrix}\\
+\lambda_1 &= -\frac{1}{2}, & v_1 &= \begin{bmatrix}1\\-2\end{bmatrix}\\
+\lambda_2 &= -\frac{1}{6}, & v_2 &= \begin{bmatrix}1\\2\end{bmatrix}
+\end{aligned}
+$$
+```phase-plane
+A = -1/3 1/12 1/3 -1/3
+```
