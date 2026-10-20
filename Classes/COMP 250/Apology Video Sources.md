@@ -25,7 +25,7 @@ All eight are original uploads, still on the creators' own channels as of Oct 13
 ## S2. Tana Mongeau, "An apology" (Feb 17, 2017)
 [Watch](https://www.youtube.com/watch?v=Fazh9Lm1kDE) · 23 min · 4.2M views
 - **What for:** using a racial slur. In a January 2017 video she discussed the word, and another YouTuber then publicized her own past use of it.
-- **Subgenre:** recent incident · confessional/emotional · no plugs
+- **Subgenre:** recent incident · confessional/emotional · channel playlists and social links, no products
 - **Description:**
 > Thank you for hearing me out, thank you for supporting me even when I don't deserve it. I promise I will make it up to you […] I'm still young and an idiot and I'll probably make a million more mistakes- but I will own up to them in a courageous and honest fashion from this point forward. […] You guys are my family […] You guys truly saved my life, doing this saved my life. And I don't want to live a life where I can't do this. I don't want to live a life without you […] THANK YOU for holding me accountable […]
 - **Notes:** the most melodramatic *sincere* description in the set. It's a letter to fans, with family language, promises about the future, and thanks to the audience for holding her accountable.

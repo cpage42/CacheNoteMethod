@@ -48,7 +48,7 @@ One page per textbook chapter: the main ideas section by section, boxed formulas
 | **Exam 2 (done 10/13)** | Archived in Exams/Exam 2: [[Exam 2 Review - Ch 8-10]] · [[Exam 2 Equation Sheet]] · [[Exam 2 Sample Exam]] · [[Exam 2 Past Exams - Worked Key]] · [[Exam 2 Practice Exam B]] · [[Exam 2 Practice Exam C (Symbolic)]] · [[Exam 2 Practice Exam D]] |
 | **Exam 3 (Tue 11/3, Ch 11–13)** | *prep notes go here* |
 | **Exam corrections** | [[Exam 1 - Corrections]] (Ch 5–8) |
-| **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] |
+| **Quiz prep** | [[Quiz Prep - HW 9.2 and 10.1]] · [[Quiz Prep - HW 10.2 and 10.3]] · [[Quiz Prep - HW 10.4 and 10.5]] · [[Quiz Prep - HW 11.2 to 12.1]] |
 | **Homework walkthroughs** | [[HW 10.4 and 10.5 Walkthrough]] (meters and RC circuits, every step explained) |
 | **Big picture** | [[Physics Intuition - Ch 5-10]] (the mental pictures behind Ch 5–10, with predict-then-check questions) |
 | **Notes** | [[10.4 Electrical Measuring Instruments]] · [[RC circuits]] · [[Lecture - Cyclotrons, Force on Currents, Torque]] (Ch 11 lecture transcript) · [[11.2 Equation Sheet]] · [[Ch 11 + 12.1 Equation Sheet]] |
