@@ -37,11 +37,11 @@ Moles needed = 0.1 M × 0.100 L = 0.0100 mol, so mass = 0.0100 mol × molar mass
 
 ### 4. Net ionic equations and prediction
 
-| Compound | Dissociation | Reacts with water? | Result |
-|---|---|---|---|
-| NaCl | $\mathrm{NaCl(s)\to Na^+(aq)+Cl^-(aq)}$ | Neither ion does. Na⁺ is from a strong base and Cl⁻ from a strong acid. | **Neutral**, about pH 7 |
-| NaF | $\mathrm{NaF(s)\to Na^+(aq)+F^-(aq)}$ | F⁻ is the conjugate base of weak HF: $\mathrm{F^-(aq)+H_2O(l)\rightleftharpoons HF(aq)+OH^-(aq)}$ | **Basic** |
-| NH₄Cl | $\mathrm{NH_4Cl(s)\to NH_4^+(aq)+Cl^-(aq)}$ | NH₄⁺ is the conjugate acid of weak NH₃: $\mathrm{NH_4^+(aq)+H_2O(l)\rightleftharpoons NH_3(aq)+H_3O^+(aq)}$ | **Acidic** |
+| Compound | Dissociation                                | Reacts with water?                                                                                          | Result                  |
+| -------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------- |
+| NaCl     | $\mathrm{NaCl(s)\to Na^+(aq)+Cl^-(aq)}$     | Neither ion does. Na⁺ is from a strong base and Cl⁻ from a strong acid.                                     | **Neutral**, about pH 7 |
+| NaF      | $\mathrm{NaF(s)\to Na^+(aq)+F^-(aq)}$       | F⁻ is the conjugate base of weak HF: $\mathrm{F^-(aq)+H_2O(l)\rightleftharpoons HF(aq)+OH^-(aq)}$           | **Basic**               |
+| NH₄Cl    | $\mathrm{NH_4Cl(s)\to NH_4^+(aq)+Cl^-(aq)}$ | NH₄⁺ is the conjugate acid of weak NH₃: $\mathrm{NH_4^+(aq)+H_2O(l)\rightleftharpoons NH_3(aq)+H_3O^+(aq)}$ | **Acidic**              |
 
 
 UK#112
@@ -63,6 +63,26 @@ RUN 3
 4.74 HCl added
 4.53 HCl added
 
+lab water stuff
+
 7.6 lab water
 11.96 NaOH added
-3.34 
+3.34 HCl added
+
+buffer is far more resistant to acid and base ph change
+could be probe error, dissolved random lab stuff, dissolved CO2, or probe error. ${}K_{w}{}$ also changes slightly at different temperatures.
+
+
+PART C
+
+NaCl
+init 7.85
+final 8.04
+
+NaF
+init 8.16
+final 9.17
+
+NH4Cl
+init 8.13
+final 7.69
