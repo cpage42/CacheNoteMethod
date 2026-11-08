@@ -49,9 +49,17 @@ $$
 $$
 4. Use Desmos to graph your solution. Check that your amplitude and period look right on your graph. Include a screenshot.
 
-**Desmos:** `y = 5cos(2x)` — peaks at $\pm 5$, repeats every $\pi \approx 3.14$.
+Graphed `y = 5cos(2x)` in Desmos. It goes between 5 and -5 and repeats every $\pi \approx 3.14$, so the amplitude and period check out.
 
-**Screenshot:** *(paste here)*
+```desmos-graph
+left=0; right=12.57; bottom=-6.5; top=6.5; height=280
+---
+y=5\cos(2x)|#2a78d6
+y=5|dashed|#8a8985
+y=-5|dashed|#8a8985
+(0,5)|label:amplitude 5|#eb6834
+(3.1416,5)|label:one period = π|#eb6834
+```
 
 ## Scenario 2
 
@@ -71,7 +79,7 @@ $$
  & y_p = \frac{\cos(\omega t)}{4 - \omega^2}
 \end{aligned}
 $$
-(No $\sin(\omega t)$ term is needed: there's no $y'$ term, so a cosine guess only ever produces cosines.)
+(I didn't need a $\sin(\omega t)$ term since there's no $y'$ in the equation, so plugging in a cosine only gives back cosines.)
 
 6. Write the general solution to the equation.
 $$
@@ -88,9 +96,9 @@ $$
 $$
 8. Use Desmos to graph the solution. You can make a slider for the $\omega$ value to try out different values. For each of the values below, use Desmos to graph the solution and estimate the maximum amplitude that you get.
 
-**Desmos:** `y = (5 - 1/(4 - w^2))cos(2x) + cos(wx)/(4 - w^2)` with a slider for `w`. Zoom the $x$-axis out a long way: near $\omega = 2$ the peaks only line up after a long time.
+Desmos: `y = (5 - 1/(4 - w^2))cos(2x) + cos(wx)/(4 - w^2)` with a slider for `w`. For $\omega$ near 2 you have to zoom out a lot on the $x$-axis because it takes a while for the peaks to line up.
 
-The largest the solution can get is $\left|C_1\right| + \left|\frac{1}{4-\omega^2}\right|$, when both cosines peak together.
+The biggest the solution can get is $|C_1| + \left|\frac{1}{4-\omega^2}\right|$, which happens when both cosines peak at the same time.
 
 | $\omega$ | $\frac{1}{4-\omega^2}$ | $C_1$ | Max amplitude |
 | --- | --- | --- | --- |
@@ -100,19 +108,67 @@ The largest the solution can get is $\left|C_1\right| + \left|\frac{1}{4-\omega^
 | (d) 1.5 | $0.571$ | $4.429$ | $\approx 5.0$ |
 | (e) 1 | $0.333$ | $4.667$ | $\approx 5.0$ |
 
-(For $\omega < 2$ both terms are positive at $t = 0$, so the max is just $y(0) = 5$. For $\omega = 10$, the two terms can't hit opposite peaks at the same time, so it also stays at $5$.)
+For $\omega = 1.5$ and $\omega = 1$ both coefficients are positive, so the biggest value is just at $t = 0$, which is 5. For $\omega = 10$ the two cosines never hit opposite peaks at the same time, so it also stays at about 5.
 
-**Screenshot:** *(paste here)*
+**(a): $\omega = 10$**
+```desmos-graph
+left=0; right=20; bottom=-6.3; top=6.3; height=260
+---
+y=(5-\frac{1}{4-10^2})\cos(2x)+\frac{\cos(10x)}{4-10^2}|#2a78d6
+y=5.00|dashed|#8a8985
+y=-5.00|dashed|#8a8985
+(0.00,5.000)|label:max ≈ 5.00|#eb6834
+```
+
+**(b): $\omega = 3$**
+```desmos-graph
+left=0; right=20; bottom=-6.7; top=6.7; height=260
+---
+y=(5-\frac{1}{4-3^2})\cos(2x)+\frac{\cos(3x)}{4-3^2}|#2a78d6
+y=5.40|dashed|#8a8985
+y=-5.40|dashed|#8a8985
+(3.14,5.400)|label:max ≈ 5.40|#eb6834
+```
+
+**(c): $\omega = 2.5$**
+```desmos-graph
+left=0; right=20; bottom=-7.3; top=7.3; height=260
+---
+y=(5-\frac{1}{4-2.5^2})\cos(2x)+\frac{\cos(2.5x)}{4-2.5^2}|#2a78d6
+y=5.89|dashed|#8a8985
+y=-5.89|dashed|#8a8985
+(6.28,5.889)|label:max ≈ 5.89|#eb6834
+```
+
+**(d): $\omega = 1.5$**
+```desmos-graph
+left=0; right=20; bottom=-6.2; top=6.2; height=260
+---
+y=(5-\frac{1}{4-1.5^2})\cos(2x)+\frac{\cos(1.5x)}{4-1.5^2}|#2a78d6
+y=5.00|dashed|#8a8985
+y=-5.00|dashed|#8a8985
+(0.00,5.000)|label:max ≈ 5.00|#eb6834
+```
+
+**(e): $\omega = 1$**
+```desmos-graph
+left=0; right=20; bottom=-6.2; top=6.2; height=260
+---
+y=(5-\frac{1}{4-1^2})\cos(2x)+\frac{\cos(1x)}{4-1^2}|#2a78d6
+y=5.00|dashed|#8a8985
+y=-5.00|dashed|#8a8985
+(0.00,5.000)|label:max ≈ 5.00|#eb6834
+```
 
 9. Which value gives the greatest maximum amplitude?
 
-$\omega = 2.5$ gives the greatest maximum amplitude ($\approx 5.89$). It's the value whose forcing frequency is closest to the natural frequency, $\omega_0 = 2$, among the ones that push against the initial motion.
+$\omega = 2.5$ gave the biggest max amplitude, about 5.89. It's one of the closest values to the natural frequency of 2, and its forcing term has the opposite sign of the starting motion, so the two cosines can add up instead of canceling.
 
 You should see that the closer we are to the value 2, the larger the maximum amplitude gets. So the closer the period of our forcing function is to the natural period of the system, the larger the amplitude becomes; the forcing function is at just the right frequency to reinforce the natural oscillation. This is called **resonance**.
 
 10. Explain how the algebra shows that the amplitude becomes large when $\omega$ is close to 2 by looking at the form of your equation.
 
-Both coefficients contain $\frac{1}{4 - \omega^2}$. As $\omega \to 2$, the denominator $4 - \omega^2 \to 0$, so $\frac{1}{4-\omega^2}$ blows up, and $C_1 = 5 - \frac{1}{4-\omega^2}$ blows up with it. The solution is two cosines with almost the same frequency, so they drift in and out of phase (beats). When they line up, the amplitude reaches $|C_1| + \left|\frac{1}{4-\omega^2}\right|$, which is huge when $\omega$ is close to 2. At exactly $\omega = 2$ the formula divides by zero, which is why Scenario 3 needs a different particular solution.
+Both terms have $\frac{1}{4 - \omega^2}$ in them. When $\omega$ gets close to 2, $4 - \omega^2$ gets close to 0, so $\frac{1}{4-\omega^2}$ gets really big, and so does $C_1 = 5 - \frac{1}{4-\omega^2}$. The solution is two cosines with almost the same frequency, so they slowly go in and out of phase (beats). When they line up, the amplitude is $|C_1| + \left|\frac{1}{4-\omega^2}\right|$, which is huge when $\omega$ is near 2. At exactly $\omega = 2$ you'd be dividing by zero, which is why Scenario 3 needs a different guess.
 
 11. Let's try some values that are very close to 2. Graph each of these in Desmos and estimate the maximum amplitude for each of the following.
 
@@ -124,9 +180,57 @@ Both coefficients contain $\frac{1}{4 - \omega^2}$. As $\omega \to 2$, the denom
 | (d) 1.99 | $25.06$ | $-20.06$ | $\approx 45.1$ |
 | (e) 1.97 | $8.396$ | $-3.396$ | $\approx 11.8$ |
 
-The closer $\omega$ is to 2, the bigger the peaks and the longer you have to wait for them (the beat period is about $\frac{2\pi}{|\omega - 2|}$, so $\approx 630$ for $\omega = 1.99$).
+The closer $\omega$ is to 2, the bigger the peaks get, but you have to wait longer to see them. The beats repeat about every $\frac{2\pi}{|\omega - 2|}$, which is around 630 for $\omega = 1.99$.
 
-**Screenshot:** *(paste here)*
+**(a): $\omega = 2.3$**
+```desmos-graph
+left=0; right=80; bottom=-8.0; top=8.0; height=260
+---
+y=(5-\frac{1}{4-2.3^2})\cos(2x)+\frac{\cos(2.3x)}{4-2.3^2}|#2a78d6
+y=6.55|dashed|#8a8985
+y=-6.55|dashed|#8a8985
+(31.42,6.550)|label:max ≈ 6.55|#eb6834
+```
+
+**(b): $\omega = 2.1$**
+```desmos-graph
+left=0; right=80; bottom=-11.9; top=11.9; height=260
+---
+y=(5-\frac{1}{4-2.1^2})\cos(2x)+\frac{\cos(2.1x)}{4-2.1^2}|#2a78d6
+y=9.88|dashed|#8a8985
+y=-9.88|dashed|#8a8985
+(31.42,9.878)|label:max ≈ 9.88|#eb6834
+```
+
+**(c): $\omega = 2.02$**
+```desmos-graph
+left=0; right=400; bottom=-34.9; top=34.9; height=260
+---
+y=(5-\frac{1}{4-2.02^2})\cos(2x)+\frac{\cos(2.02x)}{4-2.02^2}|#2a78d6
+y=29.88|dashed|#8a8985
+y=-29.88|dashed|#8a8985
+(157.08,29.876)|label:max ≈ 29.88|#eb6834
+```
+
+**(d): $\omega = 1.99$**
+```desmos-graph
+left=0; right=700; bottom=-52.4; top=52.4; height=260
+---
+y=(5-\frac{1}{4-1.99^2})\cos(2x)+\frac{\cos(1.99x)}{4-1.99^2}|#2a78d6
+y=45.13|dashed|#8a8985
+y=-45.13|dashed|#8a8985
+(314.16,-45.125)|label:max ≈ 45.13|#eb6834
+```
+
+**(e): $\omega = 1.97$**
+```desmos-graph
+left=0; right=700; bottom=-14.1; top=14.1; height=260
+---
+y=(5-\frac{1}{4-1.97^2})\cos(2x)+\frac{\cos(1.97x)}{4-1.97^2}|#2a78d6
+y=11.79|dashed|#8a8985
+y=-11.79|dashed|#8a8985
+(314.16,-11.793)|label:max ≈ 11.79|#eb6834
+```
 
 ## Scenario 3
 
@@ -137,7 +241,7 @@ $$
 
 12. Find the particular solution to this equation.
 
-$\cos(2t)$ already solves the homogeneous equation, so the usual guess gives $0$. Multiply by $t$:
+Since $\cos(2t)$ is already a solution to the homogeneous equation, the normal guess just gives 0, so I multiplied the guess by $t$:
 $$
 \begin{aligned}
  & y_p = t\,\big(A\cos(2t) + B\sin(2t)\big) = t f(t) \\
@@ -159,10 +263,14 @@ $$
 $$
 14. Graph this in Desmos. Include a screenshot. What happens to the amplitude in this case?
 
-**Desmos:** `y = 5cos(2x) + (x/4)sin(2x)` (add `y = ±sqrt(25 + x^2/16)` to see the envelope).
+The amplitude keeps growing and never levels off. The $\frac{t}{4}\sin(2t)$ term gets bigger as $t$ increases, so the oscillations keep getting larger forever (the outline on the graph is $\sqrt{25 + t^2/16}$, which is about $t/4$ for big $t$). This happens because the forcing is pushing at exactly the natural frequency, so every push adds to the motion.
 
-The amplitude grows without bound. The $\frac{t}{4}\sin(2t)$ term has an amplitude that increases linearly with time, so the oscillations keep getting bigger forever (the envelope is $\sqrt{25 + t^2/16}$, roughly $t/4$ for large $t$). Every push from the forcing lands in phase with the natural motion, so energy keeps building up. That's pure resonance.
+```desmos-graph
+left=0; right=60; bottom=-17; top=17; height=300
+---
+y=5\cos(2x)+\frac{x}{4}\sin(2x)|#2a78d6
+y=\sqrt{25+\frac{x^2}{16}}|dashed|#eb6834
+y=-\sqrt{25+\frac{x^2}{16}}|dashed|#eb6834
+```
 
-**Screenshot:** *(paste here)*
 
-This resonance effect occasionally destroys poorly designed bridges when they are subject to forces that are close to their natural frequencies. You can find videos of the Tacoma Bridge collapse due to this phenomenon.
