@@ -8,20 +8,20 @@ Tutoring: [[Lia]] · [[1 - Unit 2 Review Sheet]] · [[2 - Practice Test]] · [[3
 
 ## The unit at a glance
 
-| AP topic | What it covers | Anchor idea |
-|---|---|---|
-| 2.1 | Arithmetic vs geometric sequences | Add a constant vs multiply by a constant |
-| 2.2 | Linear vs exponential change | Equal steps in $x$ give equal *differences* (linear) or equal *ratios* (exponential) |
-| 2.3 | Exponential functions | $f(x) = ab^x$: $a$ is the start, $b$ the growth factor |
-| 2.4 | Exponential models in context | $b = 1 \pm r$ for a percent change $r$ |
-| 2.5 | Competing models | Random residuals mean a good fit; a pattern means the wrong model type |
-| 2.6 | Composition | $f(g(x))$: inside first |
-| 2.7 | Inverse functions | Swap $x$ and $y$; reflect over $y = x$ |
-| 2.8–2.9 | Logarithms as inverses of exponentials | $\log_b x = y \iff b^y = x$ |
-| 2.10 | Logarithmic functions | Domain $x > 0$, vertical asymptote $x = 0$ |
-| 2.11 | Log properties | Product, quotient, power |
-| 2.12 | Equations and inequalities | Same base, or take logs; check domain |
-| 2.13–2.14 | Log modeling and semi-log plots | A straight line on a semi-log plot means exponential |
+| AP topic  | What it covers                         | Anchor idea                                                                          |
+| --------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
+| 2.1       | Arithmetic vs geometric sequences      | Add a constant vs multiply by a constant                                             |
+| 2.2       | Linear vs exponential change           | Equal steps in $x$ give equal *differences* (linear) or equal *ratios* (exponential) |
+| 2.3       | Exponential functions                  | $f(x) = ab^x$: $a$ is the start, $b$ the growth factor                               |
+| 2.4       | Exponential models in context          | $b = 1 \pm r$ for a percent change $r$                                               |
+| 2.5       | Competing models                       | Random residuals mean a good fit; a pattern means the wrong model type               |
+| 2.6       | Composition                            | $f(g(x))$: inside first                                                              |
+| 2.7       | Inverse functions                      | Swap $x$ and $y$; reflect over $y = x$                                               |
+| 2.8–2.9   | Logarithms as inverses of exponentials | $\log_b x = y \iff b^y = x$                                                          |
+| 2.10      | Logarithmic functions                  | Domain $x > 0$, vertical asymptote $x = 0$                                           |
+| 2.11      | Log properties                         | Product, quotient, power                                                             |
+| 2.12      | Equations and inequalities             | Same base, or take logs; check domain                                                |
+| 2.13–2.14 | Log modeling and semi-log plots        | A straight line on a semi-log plot means exponential                                 |
 
 ## 1. Linear vs exponential (2.1–2.3)
 

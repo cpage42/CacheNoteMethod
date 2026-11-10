@@ -25,3 +25,9 @@ Printables in `Test Prep/PDFs`: both practice tests, both worked keys, the in-pe
 3. [[3 - In-Person Worksheet]]
 
 Printables in `Unit 2/PDFs`: practice test, worked key, in-person worksheet (answer key on the last pages), and the review sheet.
+
+## Unit 2 summative (polynomials and rational functions)
+1. [[Unit 2 Summative/1 - In-Person Worksheet|1 - In-Person Worksheet]]
+2. [[Unit 2 Summative/2 - Visualizations|2 - Visualizations]]
+
+Printable in `Unit 2 Summative/PDFs`: in-person worksheet (answer key on the last page).
