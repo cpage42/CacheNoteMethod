@@ -6,6 +6,6 @@ tags: [chem151-lab, lab-manual]
 > **Goal:** Use the method of initial rates to find the reaction orders x and y and the rate constant k.
 > **Key idea:** rate = k[H₂O₂]ˣ[I⁻]ʸ
 
-See also: [[Lab Journals]] · [[CHEM 151 Lab]]
+See also: [[Kinetics Pre-Lab - Parts I and II]] · [[Lab Journals]] · [[CHEM 151 Lab]]
 
 ![[Kinetics of H2O2 Decomposition Part 1 Lab Manual.pdf]]

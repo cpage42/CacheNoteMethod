@@ -38,6 +38,8 @@ NaF: $\mathrm{NaF(s)\to Na^+(aq)+F^-(aq)}$, then $\mathrm{F^-(aq)+H_2O(l)\rightl
 
 # 2. Kinetics of H$_2$O$_2$ Decomposition, Part I
 
+Full Parts I and II pre-lab (with procedure, tables, and calculations): [[Kinetics Pre-Lab - Parts I and II]].
+
 **Table 1** is given in the manual (all mixtures total 60.0 mL: 15.0 + 35.0 + 10.0, 15.0 + 25.0 + 20.0, 30.0 + 20.0 + 10.0). Use $M_1V_1=M_2V_2$, i.e. $M_2=M_1V_1/V_{\text{total}}$.
 
 Sample: Mixture 1 KI, $(0.10)(15.0)/60.0=0.025$ M. Mixture 1 H$_2$O$_2$, $(0.88)(10.0)/60.0=0.147$ M.
@@ -203,4 +205,4 @@ The manual does not state the water mass for NaCl ("repeat Part D using 2.5 g"),
 
 # 9. Not included
 
-Kinetics II (Table 1 is just Mixture 1 from Kinetics I, with the same concentrations: 0.147 M H$_2$O$_2$ and 0.025 M I$^-$) and Thermochemistry (all work is measured in lab) have nothing to prepare beyond reading. For Kinetics II, convert your three temperatures to kelvin before plotting $\ln k$ against $1/T$.
+Kinetics II has no written pre-lab; its notebook entry is in [[Kinetics Pre-Lab - Parts I and II]]. Thermochemistry (all work is measured in lab) has nothing to prepare beyond reading. For Kinetics II, convert your three temperatures to kelvin before plotting $\ln k$ against $1/T$.

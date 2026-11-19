@@ -83,6 +83,7 @@ Slide decks from Canvas, stored in `Prelab Talks/`. Each matches the lab manual 
 
 ## Completed pre-labs
 - [[CHEM 151 Lab - Completed Pre-Labs]] (Acid-Base, Kinetics I, Le Chatelier, IMF) — PDF: [[CHEM 151 Lab - Completed Pre-Labs.pdf]]
+- [[Kinetics Pre-Lab - Parts I and II]] (Kinetics I pre-lab plus the notebook entry and calculation set-up for Kinetics II)
 
 ## Lab journals
 - [[Lab Journals]] (transcribed notebook uploads: Calorimetry, IMF, Colligative, Le Chatelier, Making Solutions, Equilibrium Constant)
